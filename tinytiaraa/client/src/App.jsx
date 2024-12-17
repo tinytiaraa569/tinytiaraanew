@@ -102,6 +102,9 @@ import ContactBanner from './catalog/CreateBanners/ContactBanner';
 import ContactNewBanner from './catalog/CreateBanners/Bannerscreating/ContactNewBanner';
 import CategoryDetails from './catalog/CategoryDetails';
 import Shopalldataanalytics from './shopanalyticsdata/Shopalldataanalytics';
+import ChristmasTheme from './Christmas/ChristmasTheme';
+import GlobalSnowfall from './Christmas/ChristmasTheme';
+import SantaLottie from './Christmas/SantaClaus';
 
 
 
@@ -293,6 +296,10 @@ function App() {
 
         {!shouldHideNavbar && <Navbar1 />}
 
+        <GlobalSnowfall/>
+
+
+        {/* <SantaLottie /> */}
 
       
 

@@ -100,6 +100,12 @@ function TermsCon() {
                     <li>
                         <p>Tiny Tiaraa is not liable for delays caused by shipping carriers or customs-related issues</p>
                     </li>
+                    <li>
+                    <p>
+                        Orders will be dispatched within 2-3 working days once the order is confirmed.
+                    </p>
+                    </li>
+
                 </ul>
                 </li>
 
@@ -107,7 +113,9 @@ function TermsCon() {
                 <h3>Returns and Refunds:</h3>
                 <ul>
                     <li>
-                        <p>For information on returns and refunds, please refer to our separate Return Policy</p>
+                    <p>
+                            Refunds will be credited back to the original payment method within 48 hours of approval.
+                        </p>
                     </li>
                     
                 </ul>

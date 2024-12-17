@@ -1,0 +1,23 @@
+/* CSS for the Santa Lottie animation container */
+.santa-container {
+    width: 100%;  /* Full width of the parent container */
+    height: 100vh; /* Smaller height for the container */
+    margin: 0 auto; /* Center the container horizontally */
+    position: absolute;
+    top: 0;        /* Position it at the top of the screen */
+    right: 0;
+    z-index: 9999;  /* Ensure it appears above other content */
+    overflow: hidden; /* Prevent overflow outside the container */
+    background-color: transparent; /* Ensure container has no background */
+  }
+  
+  /* Keyframe animation for moving the Santa animation from right to left */
+  @keyframes moveLeft {
+    0% {
+      right: -250px;  /* Start off-screen to the right */
+    }
+    100% {
+      right: 100vw;   /* Move to the far left of the viewport */
+    }
+  }
+  
