@@ -1,0 +1,51 @@
+.shadowpngadmin{
+    transform: scale(1.4);
+    filter: drop-shadow(2px 3px 2px rgb(33, 33, 33));
+}
+.menu-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px 0 0 6px; /* Adds slight rounding to the highlight */
+  }
+  
+  .menu-item.active-tab {
+    background-color: rgba(61, 155, 192, 0.1); /* Subtle highlight for the active item */
+  }
+  
+  .menu-item.active-tab::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 5px;
+    background-color: #3d9bc0;
+    transition: width 0.3s;
+  }
+  
+  .menu-item:hover.active-tab::after {
+    width: 10px; /* Slightly expand the bookmark on hover */
+  }
+  
+  .menu-item:hover .MuiListItemText-root,
+  .menu-item.active-tab .MuiListItemText-root {
+    color: #3d9bc0; /* Font color for active and hover states */
+    font-weight: bold; /* Make the font bolder */
+  }
+  
+  .menu-item:hover .MuiListItemIcon-root,
+  .menu-item.active-tab .MuiListItemIcon-root {
+    transform: scale(1.1); /* Scale icons for hover and active states */
+    color: #3d9bc0; /* Icon color matches font */
+    transition: transform 0.2s ease-in-out, color 0.2s;
+  }
+  
+  .menu-item:hover {
+    background-color: rgba(61, 155, 192, 0.2); /* Slight highlight when hovered */
+    transition: background-color 0.2s;
+  }
+  
+  .menu-item .MuiListItemText-root {
+    transition: color 0.2s, font-weight 0.2s;
+  }
+  

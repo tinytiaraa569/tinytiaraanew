@@ -1,0 +1,431 @@
+.Morepagesection {
+  padding: 20px 0 50px;
+  font-family: "Poppins", sans-serif;
+  background-color: #f7f3f3;
+
+
+}
+
+.Morepagesection h1 {
+  font-family: "Poppins", sans-serif;
+  color: #1bb8e5;
+  font-weight: 600;
+  text-align: center;
+}
+
+.Morepagescetionmain {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+
+}
+
+.Morepagescetionmain .MorepagesectionCard {
+  width: 25%;
+  text-align: center;
+}
+
+.svgadjustcon {
+  text-align: center;
+}
+
+.conmore {
+  margin-top: -50px;
+}
+
+.MorepagesectionCard h3 {
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.Morepagesection h1::after {
+  content: "";
+  width: 10%;
+  height: 2px;
+  background-color: black;
+  display: block;
+  margin: auto;
+  border-radius: 20px;
+}
+
+@media (max-width:700px) {
+  .Morepagescetionmain {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+
+  }
+
+  .Morepagescetionmain .MorepagesectionCard {
+    width: 75%;
+  }
+
+}
+
+.customize {
+  width: 100%;
+  height: 700px;
+  border: 1px solid grey;
+  background-image: url(customimg.png);
+  background-size: 100% 700px;
+  /* Ensures the image fits within the container */
+  background-position: center center;
+  /* Centers the image within the container */
+  background-repeat: no-repeat;
+  /* Prevents tiling of the image */
+  position: relative;
+  overflow: hidden;
+  /* Hides any overflow content */
+}
+
+.CartBtn {
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 1px;
+  padding: 15px 18px;
+  width: 180px;
+  height: 40px;
+  border-radius: 12px;
+  border: none;
+  background-color: #006039;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-duration: 0.5s;
+  overflow: hidden;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.103);
+  position: relative;
+  font-size: 14px;
+}
+
+.custombtn {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+    position: absolute;
+    bottom: 50px;
+}
+
+.IconContainer {
+  position: absolute;
+  left: -50px;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 2;
+  transition-duration: 0.5s;
+  color: rgb(255, 255, 255);
+
+}
+
+.icon {
+  border-radius: 1px;
+}
+
+.fa-wand-magic-sparkles {
+  font-size: 22px;
+  margin-right: 3px;
+}
+
+.text3 {
+  height: 100%;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  z-index: 1;
+  transition-duration: 0.5s;
+  font-size: 1.04em;
+  font-weight: 600;
+}
+
+.CartBtn:hover .IconContainer {
+  transform: translateX(58px);
+  border-radius: 40px;
+  transition-duration: 0.5s;
+}
+
+.CartBtn:hover .text3 {
+  transform: translate(10px, 0px);
+  transition-duration: 0.5s;
+}
+
+.CartBtn:active {
+  transform: scale(0.95);
+  transition-duration: 0.5s;
+}
+
+.content {
+  font-family: 'Poppins', sans-serif;
+}
+
+@media (max-width: 1080px) {
+  .customize {
+    height: 600px;
+    background-size: 100% 600px;
+    /* Keep the image contained on larger screens */
+  }
+
+  .custombtn {
+    position: absolute;
+    bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .customize {
+    height: 400px;
+    background-size: contain;
+    /* Use cover for smaller screens */
+  }
+
+  .custombtn {
+    position: absolute;
+    bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .customize {
+    height: 350px;
+    background-size: contain;
+    /* Maintain aspect ratio */
+  }
+
+  .custombtn {
+    position: absolute;
+    bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .customize {
+    height: 280px;
+    background-size: contain;
+    /* Maintain aspect ratio */
+  }
+
+  .custombtn {
+    position: absolute;
+    bottom: 10px;
+  }
+  .CartBtn {
+    height: 35px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.103);
+    position: relative;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .customize {
+    height: 220px;
+    background-size: 100% contain;
+    /* Maintain aspect ratio */
+  }
+
+  .custombtn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .CartBtn {
+    padding: 10px 3px;
+    height: 0px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.103);
+    position: relative;
+    font-size: 12px;
+  }
+}
+
+
+.customenewheading h1{
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+.customenewheading h1::after{
+  content: "";
+  width: 10%;
+  height: 3px;
+  background-color: rgba(0, 0, 0, 0.873);
+  display: block;
+  margin: 5px auto;
+  border-radius: 20px;
+
+}
+.customenew {
+  
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+  height: 65vh;
+}
+
+.customenewflex {
+  padding: 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.leftcustomimg img {
+  width: 450px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.538) 0px 5px 15px 0px;
+
+}
+
+.stepper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.steps-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  background-color: #ddd;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.line {
+  width: 3px;
+  height: 50px;
+  background-color: #ddd;
+}
+
+.step.active .circle {
+  background-color: #006039;
+  color: #fff;
+}
+
+
+
+.rightcustomcontent {
+  max-width: 400px;
+}
+
+.rightcustomcontent h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.rightcustomcontent p {
+  margin-bottom: 20px;
+}
+
+.rightcustomcontent button {
+  background-color: #006039;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.rightcustomcontent button:hover{
+  background-color: #098d58;
+
+}
+.stepper::after{
+  content: "";
+  width: 2px;
+  height: 280px;
+  background-color: rgb(226, 226, 226);
+  display: block;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+.bgcustomize{
+  /* height: auto; */
+  background-color: #F3FFFD;
+  position: relative;
+  z-index: 0;
+  padding-bottom: 30px;
+}
+
+@media (max-width:1080px) {
+  .customenewheading h1{
+    font-size: 26px;
+  }
+  .customenewflex{
+    flex-direction: column;
+  }
+  .customenew {
+    height: auto;
+  }
+  .leftcustomimg{
+    order: 1 !important;
+  }
+  .stepper{
+    margin-top: 25px;
+    order: 3 !important;
+    flex-direction: row;
+    gap: 30px;
+  }
+  .rightcustomcontent{
+    order: 2 !important;
+    margin-top: 10px;
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center;
+  }
+  .stepper::after{
+    content: "";
+    width: 100% !important;
+    height: 2px !important;
+    background-color: rgb(226, 226, 226);
+    display: block;
+    position: absolute;
+    top: 20px;
+    z-index: -1;
+  }
+  
+}
+
+@media (max-width:400px) {
+  .customenewheading h1{
+    font-size: 20px;
+  }
+  .customenewflex {
+    padding: 15px 0;
+  }
+  .rightcustomcontent h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .rightcustomcontent p {
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+}

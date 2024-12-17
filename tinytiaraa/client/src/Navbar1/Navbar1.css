@@ -1,0 +1,508 @@
+.navbar1mian {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    /* Added shadow for better appearance */
+    transition: background-color 0.3s ease-in-out;
+}
+
+
+
+.nav1banner {
+    padding: 10px 10px;
+    /* background-color: #5DC2B0; */
+    background: #006039;
+    /* color: rgb(0, 0, 0); */
+
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    font-weight: 500;
+
+}
+
+.nav1banner .customerinfo {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    white-space: nowrap;
+    gap: 5px;
+}
+
+.nav1banner .couponscetion {
+   
+    font-size: 13px;
+    /* max-width: 60%; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* Adds ellipsis if the text overflows */
+    white-space: nowrap;
+
+
+}
+
+.nav1banner .social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.nav1banner .social-icons i {
+    font-size: 18px;
+    /* Adjust the icon size */
+    /* color: #000; */
+    color: #ffffff;
+
+    transition: all 0.3s ease;
+}
+
+.nav1banner .social-icons i:hover {
+    transform: scale(1.1);
+    /* Change color on hover */
+}
+
+.navbar1 {
+    padding: 5px 18px;
+    color: black;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+    /* Ensures items are spaced evenly */
+    border-bottom: 1px solid #eaeaea;
+    /* Adds a subtle border */
+}
+
+.navbar1 .logo img {
+    cursor: pointer;
+    padding-top: 5px;
+    width: 200px;
+    height: 60px;
+    object-fit: contain;
+    transform: scale(2);
+    transition: transform 0.3s ease;
+}
+
+.navbar1 .menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    /* Adds spacing between menu items */
+}
+
+.navbar1 .menu li {
+    list-style-type: none;
+}
+
+.navbar1 .menu a {
+    text-decoration: none;
+    color: black;
+    /* font-family: ro; */
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    /* font-family: "Roboto", sans-serif !important; */
+}
+
+.navbar1 .menu a::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: rgba(27, 184, 229, 1);
+    display: block;
+    border-radius: 10px;
+}
+
+
+.navbar1 .menu a:hover::after {
+    width: 100%;
+}
+
+.navbar1 .menu .active {
+    font-weight: 500;
+    color: #1bb8e5;
+    /* border-bottom: 2px solid rgba(27, 184, 229, 1) ; */
+}
+
+.navbar1 .iconnav:hover {
+    color: #1bb8e5;
+}
+
+.parenthover {
+    overflow: hidden;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    /* Ensure the parent is hoverable */
+}
+
+.shopdrop {
+    position: absolute;
+    /* Position relative to the parent */
+    top: 93%;
+    /* Position right below the parent */
+    left: 0;
+    width: 100%;
+    /* Align with the left of the parent */
+    /* width: 100vw; */
+    /* Full width of the viewport */
+    background-color: #fff;
+    color: black;
+    z-index: 999;
+    display: none;
+    /* Hide by default */
+    border-top: 1px solid rgb(192, 192, 192);
+    padding: 10px 20px 30px 20px;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+.collectionnav1{
+    font-size: 14px !important;
+}
+.parenthover:hover .shopdrop {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+.navshopimg {
+    width: 250px;
+    height: 320px;
+}
+
+.navshopimg img {
+    width: 90%;
+    height: 100%;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.shopdrop .borderright {
+    padding-right: 24px;
+    border-right: 1px solid grey;
+}
+
+.collectionnav1:hover {
+    color: #1bb8e5;
+    cursor: pointer;
+}
+
+.navbar1 .mobileresp {
+    display: none;
+}
+
+.navbar1 .mobileresp i {
+    font-size: 30px;
+}
+
+.mobile-nav .logo img {
+    cursor: pointer;
+    transform: scale(1.5);
+
+}
+
+.parenthover .group-hover\\:block {
+    display: none;
+}
+
+.parenthover:hover .group-hover\\:block {
+    display: block;
+}
+
+/* If using Tailwind CSS for everything, you can remove the above and use this: */
+.group-hover\\:block {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+.shopdrop.hidden {
+    display: none !important;
+  }
+  .shopdrop.visible {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+/* Additional custom classes */
+.subcatmain {
+    display: flex;
+    align-items: center;
+}
+
+.subcatchild {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s linear;
+}
+
+.subcatmain:hover .subcatchild {
+    visibility: visible;
+    opacity: 1;
+}
+
+.searchconstyle {
+    position: relative;
+    width: 228px !important;
+    height: 37px !important;
+    border-radius: 27px !important;
+    box-shadow: 2px 2px 8px 0px #00000040;
+}
+
+.searchconstyle input {
+    outline: none;
+    border: none;
+    margin-left: 20px;
+    width: 80%;
+    height: 37px !important;
+}
+
+.searchconstyle input::placeholder {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+
+}
+
+
+.searchiconadjustpos{
+    position: absolute;
+    top: 7px;
+    right: 10px;
+}
+.searchconstyle input:focus ~ .searchiconadjustpos {
+    opacity: 0;
+    pointer-events: none; /* Prevent interaction with the icon */
+}
+
+.pricenav a{
+    font-size: 16px !important;
+}
+.nav1bannermobile{
+    padding: 10px 10px;
+    /* background-color: #5DC2B0; */
+    background: #006039;
+    /* color: rgb(0, 0, 0); */
+
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    font-weight: 500;
+    display: none;
+    
+
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background of the scrollbar track */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #888; /* Scrollbar color */
+    border-radius: 10px; /* Rounded scrollbar */
+    border: 2px solid transparent; /* Space around the scrollbar */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Scrollbar color when hovered */
+}
+
+/* .shadowlogonav{
+    filter: drop-shadow(2px 2px 2px rgb(0, 0, 0));
+} */
+.custom-scrollbar {
+    scrollbar-width: thin; /* Firefox support */
+    scrollbar-color: #888 #f1f1f1; /* Custom colors for scrollbar and track */
+}
+.headcurrencymain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width:1300px) {
+    .navbar1 .logo img {
+        width: 150px;
+    }
+
+    .navbar1 .menu a {
+        font-size: 16px;
+    }
+
+}
+
+
+@media (max-width:1050px) {
+    .navbar1mian {
+        display: none;
+    }
+    .nav1bannermobile{
+        display: flex;
+    }
+    .mobile-nav {
+        display: block;
+    }
+
+    .icons .serach {
+        display: none;
+    }
+
+    .mobileresp {
+        display: block;
+    }
+
+    .Navbar .menu li {
+        padding: 30px 0;
+    }
+
+
+    .Navbar .menu {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        top: 120px;
+        width: 70%;
+        height: 70vh;
+        left: -75%;
+        color: black;
+        background-color: #ffffff9d;
+        transition: all 1s ease-in-out;
+        z-index: 3;
+    }
+
+    .Navbar .menuopen {
+        left: 0%;
+    }
+
+
+    .banner p {
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+
+}
+
+@media (max-width: 768px) {
+    .navbar1 {
+        padding: 8px 10px;
+    }
+
+    .navbar1 .menu {
+        display: none;
+        /* Hide menu on smaller screens */
+    }
+
+    .mobileresp {
+        display: block;
+        cursor: pointer;
+    }
+
+    .Navbar .menuopen {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 0.95);
+        z-index: 1000;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .Navbar .menuopen li {
+        padding: 15px 0;
+        font-size: 20px;
+    }
+}
+
+@media (max-width:500px) {
+    .mobajustnavsall {
+        width: 75% !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .couponscetion{
+        font-size: 10px !important;
+    }
+    .nav1banner {
+        /* flex-direction: column; */
+        text-align: center;
+        gap: 10px;
+    }
+
+    .navbar1 {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .navbar1 .logo img {
+        width: 150px;
+    }
+
+    .navbar1 .mobileresp {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+
+    .mobajustnavsall {
+        width: 90% !important;
+    }
+    .headcurrencycode{
+        font-size: 12px !important;
+    }
+    .currencysection{
+       
+        width: 15% !important;
+    }
+    .couponscetion{
+        width: 82% !important;
+
+    }
+    .headcurrencycode{
+        margin-top: 2px;
+    }
+
+}
+
+@media (max-width:400px) {
+ 
+     .couponscetion span{
+         font-size: 8px !important;
+     }
+     .headcurrencycode{
+        font-size: 8px !important;
+    }
+     
+ }
+
+ @media (max-width:350px) {
+   
+     .couponscetion span{
+         font-size: 6px !important;
+     }
+ }

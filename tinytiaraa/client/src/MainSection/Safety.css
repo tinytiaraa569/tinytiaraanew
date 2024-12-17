@@ -1,0 +1,233 @@
+/* Hide slider for screens larger than 569px */
+.slider-steps {
+  display: none;
+}
+
+
+.refermain {
+  width: 100%;
+  height: 95vh;
+  display: flex;
+  gap: 30px;
+}
+
+.refermainimg {
+  width: 50%;
+  height: 80vh;
+  margin: auto;
+}
+
+.refermainimg img {
+  width: 100%;
+  height: 100%;
+  /* object-fit: contain; */
+}
+
+.refermaincontent {
+  padding: 30px 25px !important;
+}
+
+.referheading h1 {
+  font-size: 30px;
+}
+
+.referheading p {
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.referstepno {
+  /* display: flex;
+  align-items: center; */
+}
+
+.refersteps {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 30px;
+}
+
+.refersteps .referstep {
+  padding: 20px 15px;
+  width: 350px;
+  height: auto;
+  display: flex;
+  gap: 40px;
+  box-shadow: 2px 2px 10px #00000040;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.refersteps .referstep:hover {
+  transform: scale(1.03);
+  box-shadow: 2px 2px 10px #00000088;
+
+  
+}
+.referstep .referstepno h1 {
+  font-size: 40px;
+  font-weight: 600;
+  color: #006039;
+}
+
+.referstep .refersteptext h3 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.referstep .refersteptext p {
+  font-size: 14px;
+  margin-top: 5px;
+}
+.referbtnnew{
+  background-color: #006039;
+  padding: 6px 14px;
+  color: white;
+  border-radius: 7px;
+}
+.referbtnnew:hover{
+  background-color: #098d58;
+}
+@media (max-width: 1080px) {
+  .refermain {
+    flex-direction: column;
+    height: auto;
+    gap: 10px;
+  }
+
+  .refermainimg {
+    width: 50%;
+    height: auto;
+  }
+
+  .refermainimg img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 800px) {
+  .refersteps {
+    justify-content: center;
+    grid-template-columns: 43% 43%;
+    gap: 30px;
+  }
+
+  .refersteps .referstep {
+    width: 100%;
+  }
+}
+
+@media (max-width: 650px) {
+  .refersteps {
+    justify-content: center;
+    grid-template-columns: 48% 48%;
+    gap: 15px;
+  }
+
+  .refersteps .referstep {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+
+  /* Hide regular steps and show slider for small screens */
+  .regular-steps {
+    display: none;
+  }
+
+  .slider-steps {
+    display: block;
+  }
+  .referstep {
+    margin: auto !important;
+    padding: 10px 15px;
+    width: 350px;
+    height: auto;
+    display: flex;
+    gap: 25px;
+    box-shadow: 2px 2px 10px #00000040;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .slidersafteryadjust {
+    padding: 10px;
+  }
+
+  /* Target only the slider in the custom-slider class */
+  .custom-slider .slick-prev {
+    position: absolute;
+    left: -25px !important;
+    width: 20px;
+    height: 20px;
+    background-color: #006039;
+    color: white;
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  .custom-slider .slick-next {
+    right: -15px;
+    width: 20px;
+    height: 20px;
+    background-color: #006039;
+    color: white;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  .referbtnnew{
+    margin-top: 10px !important;
+  }
+}
+
+@media (max-width: 400px) {
+
+  /* Hide regular steps and show slider for small screens */
+  .regular-steps {
+    display: none;
+  }
+
+  .slider-steps {
+    display: block;
+  }
+  .referstep {
+    margin: auto !important;
+    padding: 10px 15px;
+    width: 95%;
+    height: auto;
+    display: flex;
+    gap: 20px;
+    box-shadow: 2px 2px 10px #00000040;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .slidersafteryadjust {
+    padding: 10px;
+  }
+  .custom-slider .slick-prev {
+    position: absolute;
+    left: -25px !important;
+    width: 20px;
+    height: 20px;
+    background-color: #006039;
+    color: white;
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  .custom-slider .slick-next {
+    right: -15px;
+    width: 20px;
+    height: 20px;
+    background-color: #006039;
+    color: white;
+    border-radius: 50%;
+    z-index: 1;
+  }
+}
+
+  

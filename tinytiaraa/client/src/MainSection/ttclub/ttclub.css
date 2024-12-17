@@ -1,0 +1,218 @@
+.ttclub{
+    /* margin: 20px 0; */
+    width: 100%;
+    height: 80vh;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    background-color: #fff;
+    /* display: flex;
+    justify-content:center ;
+    align-items: center; */
+    position: relative;
+}
+.ttclubmain{
+    overflow: hidden;
+    width: 100%;
+    height: 80vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.322),rgba(0, 0, 0, 0.279),rgba(0, 0, 0, 0.284));
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ttclubmainadjust{
+    padding: 20px 50px;
+    background-color: #38373786;
+    color: white;
+    border-radius: 20px;
+}
+
+.ttclub h1{
+    font-size: 40px;
+    font-weight: 600;
+}
+.ttclub video{
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+}
+
+.ttclub input{
+    font-size: 28px;
+    margin-top: 10px;
+    width: 90%;
+    padding: 8px 20px;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid white;
+}
+.ttclub button{
+    margin-top: 50px;
+    padding: 15px 25px;
+    border: none;
+    background: #5DC2B0;
+    color: rgb(0, 0, 0);
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    letter-spacing: 2px;
+    border-radius: 25px;
+}
+.ttclubmainadjust input{
+    color: white;
+
+}
+.ttclub button:hover{
+    background: #368274;
+
+    color: white;
+   
+}
+
+@media (max-width:1080px) {
+    .ttclubmainadjust{
+        width: 70%;
+    }
+    .ttclub h1{
+        font-size: 30px;
+        font-weight: 600;
+    }
+    .ttclub input{
+        font-size: 20px;
+        margin-top: 10px;
+        width: 80%;
+       
+    }
+    .ttclubmainadjust p{
+        font-size: 13px;
+    }
+    .ttclub button{
+        margin-top: 40px;
+        padding: 10px 20px;
+    }
+    .ttclub{
+        /* margin: 20px 0; */
+        width: 100%;
+        height: 70vh;
+       
+    }
+    .ttclubmain{
+        width: 100%;
+        height: 70vh;
+ 
+    }
+    .ttclub video{
+        width: 100%;
+        height: 70vh;
+        object-fit: cover;
+    }
+    
+}
+
+@media (max-width:750px) {
+    .ttclubmainadjust{
+        width: 80%;
+    }
+    .ttclub h1{
+        font-size: 30px;
+        font-weight: 600;
+    }
+    .ttclub input{
+        font-size: 20px;
+        margin-top: 10px;
+        width: 80%;
+       
+    }
+    .ttclubmainadjust p{
+        font-size: 13px;
+    }
+    .ttclub button{
+        margin-top: 40px;
+        padding: 10px 20px;
+    }
+    .ttclub{
+        /* margin: 20px 0; */
+        width: 100%;
+        height: 60vh;
+       
+    }
+    .ttclubmain{
+        width: 100%;
+        height: 60vh;
+ 
+    }
+    .ttclub video{
+        width: 100%;
+        height: 60vh;
+        object-fit: cover;
+    }
+    
+}
+
+
+@media (max-width:450px) {
+    .ttclubmainadjust{
+        width: 90%;
+    }
+    .ttclub h1{
+        font-size: 20px;
+        font-weight: 400;
+    }
+    .ttclub input{
+        font-size: 13px;
+        margin-top: 10px;
+        width: 80%;
+       
+    }
+    .ttclubmainadjust p{
+        font-size: 10px;
+    }
+    .ttclub button{
+        margin-top: 40px;
+        padding: 10px 20px;
+    }
+    .ttclub{
+        /* margin: 20px 0; */
+        width: 100%;
+        height: 50vh;
+       
+    }
+    .ttclubmain{
+        width: 100%;
+        height: 50vh;
+ 
+    }
+    .ttclub video{
+        width: 100%;
+        height: 50vh;
+        object-fit: cover;
+    }
+    
+}
+
+@media (max-width:320px) {
+    .ttclubmainadjust{
+        width: 90%;
+    }
+    .ttclub h1{
+        font-size: 20px;
+        font-weight: 400;
+    }
+    .ttclub input{
+        font-size: 10px;
+        margin-top: 10px;
+        width: 80%;
+       
+    }
+    .ttclubmainadjust p{
+        font-size: 10px;
+    }
+    .ttclub button{
+        margin-top: 40px;
+        padding: 10px 20px;
+    }
+    
+}

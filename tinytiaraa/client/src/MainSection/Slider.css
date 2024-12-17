@@ -1,0 +1,564 @@
+.slidersec {
+  width: 100%;
+  height: 600px;
+  /* Ensuring consistent aspect ratio across all devices */
+  position: relative;
+  overflow: hidden;
+}
+
+.slidersec img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* This ensures the image fills the area without stretching */
+}
+
+/* Responsive styles for text content inside the slider */
+.slidercontentadjust {
+  max-width: 600px;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  padding: 20px;
+}
+
+.slidercontentadjust h1 {
+  font-size: 4vw;
+  /* Responsive font size */
+  font-weight: 600;
+}
+
+.slidercontentadjust p {
+  font-size: 1.5vw;
+  letter-spacing: 1px;
+  margin-top: 1rem;
+}
+
+.slidercontentadjust button {
+  margin: 8px 0;
+  padding: 15px 25px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 1.5vw;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.slidercontentadjust button:hover {
+  background-color: #333;
+  /* Slightly lighter color on hover */
+}
+
+/* Responsive adjustments */
+@media (min-width: 1580px) {
+  .slidersec {
+    width: 100%;
+    height: 730px;
+  }
+
+  .slidersec img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+}
+@media (max-width: 1240px) {
+  
+  .slidersec {
+    width: 100%;
+    height: 570px;
+  }
+
+  .slidersec img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 1190px) {
+  
+  .slidersec {
+    width: 100%;
+    height: 530px;
+  }
+
+  .slidersec img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+@media (max-width: 1150px) {
+  
+  .slidersec {
+    width: 100%;
+    height: 515px;
+  }
+
+  .slidersec img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 1100px) {
+  
+  .slidersec {
+    width: 100%;
+    height: 490px;
+  }
+
+  .slidersec img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+@media (max-width: 1040px) {
+  
+  .slidersec {
+    width: 100%;
+    height: 430px;
+  }
+
+  .slidersec img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 969px) {
+  .slidercontentadjust h1 {
+    font-size: 6vw;
+  }
+
+  .slidercontentadjust p {
+    font-size: 2.5vw;
+  }
+
+  .slidercontentadjust button {
+    font-size: 2vw;
+  }
+
+  .slidersec {
+    width: 100%;
+    height: 410px;
+  }
+
+  .slidersec img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 900px) {
+  
+  .slidersec {
+    width: 100%;
+    height: 410px;
+  }
+
+  .slidersec img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 840px) {
+  
+  .slidersec {
+    width: 100%;
+    height: 380px;
+  }
+
+  .slidersec img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 769px) {
+  .slidercontentadjust h1 {
+    font-size: 8vw;
+  }
+
+  .slidercontentadjust p {
+    font-size: 3vw;
+  }
+
+  .slidercontentadjust button {
+    font-size: 2.5vw;
+  }
+
+  .slidersec {
+    width: 100%;
+    height: 330px;
+  }
+
+  .slidersec img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 680px) {
+  
+  .slidersec {
+    width: 100%;
+    height: 300px;
+  }
+
+  .slidersec img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+@media (max-width: 620px) {
+  
+  .slidersec {
+    width: 100%;
+    height: 270px;
+  }
+
+  .slidersec img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+@media (max-width: 580px) {
+  .slidersec {
+    width: 100vw;
+    height: 250px;
+    overflow: hidden;
+  }
+
+  .slidersec img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .slidercontentadjust h1 {
+    font-size: 10vw;
+  }
+
+  .slidercontentadjust p {
+    font-size: 3.5vw;
+  }
+
+  .slidercontentadjust button {
+    font-size: 3vw;
+  }
+}
+@media (max-width: 550px) {
+  .slidersec {
+    width: 100vw;
+    height: 230px;
+    overflow: hidden;
+  }
+
+  .slidersec img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .slidercontentadjust h1 {
+    font-size: 10vw;
+  }
+
+  .slidercontentadjust p {
+    font-size: 3.5vw;
+  }
+
+  .slidercontentadjust button {
+    font-size: 3vw;
+  }
+}
+@media (max-width: 500px) {
+  .slidersec {
+    width: 100vw;
+    height: 225px;
+    overflow: hidden;
+  }
+
+  .slidersec img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .slidercontentadjust h1 {
+    font-size: 10vw;
+  }
+
+  .slidercontentadjust p {
+    font-size: 3.5vw;
+  }
+
+  .slidercontentadjust button {
+    font-size: 3vw;
+  }
+}
+@media (max-width: 480px) {
+  .slidersec {
+    width: 100vw;
+    height: 215px;
+    overflow: hidden;
+  }
+
+  .slidersec img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .slidercontentadjust h1 {
+    font-size: 10vw;
+  }
+
+  .slidercontentadjust p {
+    font-size: 3.5vw;
+  }
+
+  .slidercontentadjust button {
+    font-size: 3vw;
+  }
+}
+@media (max-width: 450px) {
+  .slidersec {
+    width: 100vw;
+    height: 190px;
+    overflow: hidden;
+  }
+
+  .slidersec img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .slidercontentadjust h1 {
+    font-size: 10vw;
+  }
+
+  .slidercontentadjust p {
+    font-size: 3.5vw;
+  }
+
+  .slidercontentadjust button {
+    font-size: 3vw;
+  }
+}
+@media (max-width: 400px) {
+  .slidersec {
+    width: 100%;
+    height: 170px;
+  }
+
+  .slidersec img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .slidercontentadjust h1 {
+    font-size: 12vw;
+  }
+
+  .slidercontentadjust p {
+    font-size: 4vw;
+  }
+
+  .slidercontentadjust button {
+    font-size: 3.5vw;
+  }
+}
+
+.Categories{
+  background-color: #F3FFFD;
+  
+}
+
+.Categories h1 {
+  padding: 20px 0;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  color: #01463A;
+
+
+}
+
+.Categories .categoriescard {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+  border: 1px solid rgba(0, 0, 0, 0.422);
+}
+
+.Categories .categoriessection {
+  padding: 0px 0 25px;
+  display: grid;
+  grid-template-columns: 22% 22% 22% 22%;
+  gap: 30px;
+  justify-content: center;
+
+}
+
+.Categories .categoriescard:hover img {
+  transform: scale(1.2);
+
+}
+
+
+
+.Categories .categoriesimg {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.Categories .categoriesimg img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  /* object-fit: fill; */
+  transition: all 1.2s;
+}
+
+.Categories .categoriestext {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.05);
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: flex-end;
+}
+
+.categoriestext h3 {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+.categoriestext .adjust {
+  padding: 25px 15px;
+}
+
+.categoriestext button {
+  font-size: 12px;
+  margin-top: 10px;
+  padding: 8px 15px;
+  background-color: aliceblue;
+  color: black;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: "Poppins", sans-serif;
+  border-radius: 8px;
+}
+
+.Categories .categoriescard:hover .categoriestext button {
+  transition: all 0.5s;
+  background-color: #006039;
+  color: rgb(255, 255, 255);
+
+}
+
+@media (max-width:969px) {
+  .Categories .categoriessection {
+    grid-template-columns: repeat(3, 30%);
+  }
+
+
+}
+
+@media (max-width:769px) {
+  .Categories .categoriessection {
+    grid-template-columns: repeat(2, 45%);
+  }
+
+  .Categories .categoriescard {
+    height: 280px;
+  }
+
+  .Categories .categoriesimg img {
+    height: 280px;
+  }
+
+  .categoriestext button {
+    padding: 6px 13px;
+    background-color: aliceblue;
+  }
+
+  .categoriestext .adjust {
+    padding: 15px 20px;
+  }
+
+}
+
+@media (max-width:569px) {
+  .Categories .categoriessection {
+    grid-template-columns: repeat(2, 43%);
+  }
+
+  .Categories .categoriescard {
+    height: 250px;
+  }
+
+  .Categories .categoriesimg img {
+    height: 250px;
+  }
+
+  .categoriestext button {
+    padding: 3px 10px;
+    background-color: aliceblue;
+    font-size: 14px;
+  }
+
+  .categoriestext .adjust {
+    padding: 15px 20px;
+  }
+  .Categoriesexplore{
+    font-size: 25px !important;
+  }
+}
+
+@media (max-width:399px) {
+  .Categories .categoriessection {
+    grid-template-columns: repeat(1, 73%);
+  }
+
+  .Categories .categoriescard {
+    height: 220px;
+  }
+
+  .Categories .categoriesimg img {
+    height: 220px;
+  }
+
+  .categoriestext button {
+    padding: 3px 10px;
+    background-color: aliceblue;
+    font-size: 14px;
+  }
+
+  .categoriestext .adjust {
+    padding: 15px 20px;
+  }
+}

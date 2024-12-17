@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Home Page -->
+  <url>
+    <loc>https://www.tinytiaraa.com/</loc>
+    <lastmod>2024-10-19</lastmod>
+    <priority>1.00</priority>
+  </url>
+
+  <!-- About Page -->
+  <url>
+    <loc>https://www.tinytiaraa.com/about</loc>
+    <lastmod>2024-10-19</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Shop Page -->
+  <url>
+    <loc>https://www.tinytiaraa.com/shop</loc>
+    <lastmod>2024-10-19</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Customised Jewels Page -->
+  <url>
+    <loc>https://www.tinytiaraa.com/personalised-prosperity</loc>
+    <lastmod>2024-10-19</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Contact Page -->
+  <url>
+    <loc>https://www.tinytiaraa.com/contacts</loc>
+    <lastmod>2024-10-19</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+  <!-- Terms and Conditions Page -->
+  <url>
+    <loc>https://www.tinytiaraa.com/terms-and-conditions</loc>
+    <lastmod>2024-10-19</lastmod>
+    <priority>0.60</priority>
+  </url>
+
+  <!-- Privacy Policy Page -->
+  <url>
+    <loc>https://www.tinytiaraa.com/privacy-policy</loc>
+    <lastmod>2024-10-19</lastmod>
+    <priority>0.60</priority>
+  </url>
+
+  <!-- Warranty Extension Page -->
+  <url>
+    <loc>https://www.tinytiaraa.com/warranty-extension</loc>
+    <lastmod>2024-10-19</lastmod>
+    <priority>0.60</priority>
+  </url>
+
+  <!-- Exchange Policy Page -->
+  <url>
+    <loc>https://www.tinytiaraa.com/exchange-policy</loc>
+    <lastmod>2024-10-19</lastmod>
+    <priority>0.60</priority>
+  </url>
+
+  <!-- Affiliate Program Commission Policy Page -->
+  <url>
+    <loc>https://www.tinytiaraa.com/affiliate-program-commission-policy</loc>
+    <lastmod>2024-10-19</lastmod>
+    <priority>0.60</priority>
+  </url>
+
+  <!-- Gold Jewellery Insurance Policy Page -->
+  <url>
+    <loc>https://www.tinytiaraa.com/gold-jewellery-insurance-policy</loc>
+    <lastmod>2024-10-19</lastmod>
+    <priority>0.60</priority>
+  </url>
+
+  <!-- Children Safety Jewellery Policy Page -->
+  <url>
+    <loc>https://www.tinytiaraa.com/children-safety-jewellery-policy</loc>
+    <lastmod>2024-10-19</lastmod>
+    <priority>0.60</priority>
+  </url>
+
+  <!-- Customised Jewellery Policy Page -->
+  <url>
+    <loc>https://www.tinytiaraa.com/customised-jewellery-policy</loc>
+    <lastmod>2024-10-19</lastmod>
+    <priority>0.60</priority>
+  </url>
+
+  <!-- Gold Coin Promotion with Personalised Horoscope Engraving Policy Page -->
+  <url>
+    <loc>https://www.tinytiaraa.com/gold-coin-promotion-with-personalised-horoscope-engraving-policy</loc>
+    <lastmod>2024-10-19</lastmod>
+    <priority>0.60</priority>
+  </url>
+
+  <!-- Gold and Diamond Jewellery Certification Policy Page -->
+  <url>
+    <loc>https://www.tinytiaraa.com/gold-and-diamond-jewellery-certification-policy</loc>
+    <lastmod>2024-10-19</lastmod>
+    <priority>0.60</priority>
+  </url>
+
+  <!-- Spin and Win Page -->
+  <url>
+    <loc>https://www.tinytiaraa.com/spinandwin</loc>
+    <lastmod>2024-10-19</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+  <!-- Login Page -->
+  <url>
+    <loc>https://www.tinytiaraa.com/login</loc>
+    <lastmod>2024-10-19</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <!-- Signup Page -->
+  <url>
+    <loc>https://www.tinytiaraa.com/sign-up</loc>
+    <lastmod>2024-10-19</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <!-- Products Page -->
+  <url>
+    <loc>https://www.tinytiaraa.com/products</loc>
+    <lastmod>2024-10-19</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+ 
+  <!-- Age Group Product Pages -->
+  <url>
+    <loc>https://www.tinytiaraa.com/products?ageGroup=infants</loc>
+    <lastmod>2024-12-13</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://www.tinytiaraa.com/products?ageGroup=kids</loc>
+    <lastmod>2024-12-13</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://www.tinytiaraa.com/products?ageGroup=teens</loc>
+    <lastmod>2024-12-13</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://www.tinytiaraa.com/products?ageGroup=mom</loc>
+    <lastmod>2024-12-13</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://www.tinytiaraa.com/products?ageGroup=momandme</loc>
+    <lastmod>2024-12-13</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+  <!-- category  -->
+
+ <url>
+    <loc>https://www.tinytiaraa.com/products?category</loc>
+    <lastmod>2024-12-13</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+<url>
+  <loc>https://www.tinytiaraa.com/products?category=Diamond%20Earrings</loc>
+  <lastmod>2024-12-13</lastmod>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://www.tinytiaraa.com/products?category=Diamond%20Pendants</loc>
+  <lastmod>2024-12-13</lastmod>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://www.tinytiaraa.com/products?category=Diamond%20Black%20Bead%20Bracelets</loc>
+  <lastmod>2024-12-13</lastmod>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://www.tinytiaraa.com/products?category=Diamond%20Bracelets</loc>
+  <lastmod>2024-12-13</lastmod>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://www.tinytiaraa.com/products?category=Sets</loc>
+  <lastmod>2024-12-13</lastmod>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://www.tinytiaraa.com/products?category=Religious%20Collections</loc>
+  <lastmod>2024-12-13</lastmod>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://www.tinytiaraa.com/products?category=kids%20accessories</loc>
+  <lastmod>2024-12-13</lastmod>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://www.tinytiaraa.com/products?category=Pearl%20Collection</loc>
+  <lastmod>2024-12-13</lastmod>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://www.tinytiaraa.com/products?category=Tabeez%20Collection</loc>
+  <lastmod>2024-12-13</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
+<!-- subcatgeory -->
+
+<url>
+  <loc>https://www.tinytiaraa.com/products?category=Diamond%20Pendants&amp;subcategory=Alphabet</loc>
+  <lastmod>2024-12-13</lastmod>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://www.tinytiaraa.com/products?category=Diamond%20Pendants&amp;subcategory=Numeric</loc>
+  <lastmod>2024-12-13</lastmod>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://www.tinytiaraa.com/products?category=Diamond%20Pendants&amp;subcategory=Generic</loc>
+  <lastmod>2024-12-13</lastmod>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://www.tinytiaraa.com/products?category=kids%20accessories&amp;subcategory=spoon</loc>
+  <lastmod>2024-12-13</lastmod>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://www.tinytiaraa.com/products?category=kids%20accessories&amp;subcategory=glass</loc>
+  <lastmod>2024-12-13</lastmod>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://www.tinytiaraa.com/products?category=kids%20accessories&amp;subcategory=bowl</loc>
+  <lastmod>2024-12-13</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
+  <!-- Silver Products Page -->
+  <url>
+    <loc>https://www.tinytiaraa.com/silver</loc>
+    <lastmod>2024-10-19</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+  <!-- Cart Page -->
+  <url>
+    <loc>https://www.tinytiaraa.com/cart</loc>
+    <lastmod>2024-10-19</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <!-- Checkout Page -->
+  <url>
+    <loc>https://www.tinytiaraa.com/checkout-page</loc>
+    <lastmod>2024-10-19</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <!-- Payment Page -->
+  <url>
+    <loc>https://www.tinytiaraa.com/payment</loc>
+    <lastmod>2024-10-19</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <!-- Order Success Page -->
+  <url>
+    <loc>https://www.tinytiaraa.com/order/success</loc>
+    <lastmod>2024-10-19</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <!-- PayU Success Page -->
+  <url>
+    <loc>https://www.tinytiaraa.com/payu/order/success</loc>
+    <lastmod>2024-10-19</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <!-- 404 Page -->
+  <url>
+    <loc>https://www.tinytiaraa.com/404</loc>
+    <lastmod>2024-10-19</lastmod>
+    <priority>0.30</priority>
+  </url>
+
+</urlset>

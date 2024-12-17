@@ -1,0 +1,49 @@
+.usermenusection{
+    font-family: "Poppins", sans-serif;
+    width: 100%;
+    height: 100%;
+    background-color: #d7d9dd;
+
+
+}
+.usermenusection h3{
+    padding: 10px 0;
+    text-align: center;
+}
+.usermenusection h3::after{
+    content: "";
+    width: 10%;
+    height: 2px;
+    background-color: black;
+    display: block;
+    margin: auto;
+
+}
+.usersectioncon ul li{
+    margin: 9px 0;
+    border: 1px solid gray;
+    list-style: none;
+    padding: 18px 24px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+.usersectioncon ul li a{
+    font-size: 19px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+.usermenusection .adminmenuicon{
+    text-align: center;
+}
+.usermenusection .adminmenuicon img{
+    width: 200px;
+    height: 120px;
+    margin: 10px 0;
+}
+.usersectioncon ul li i{
+    margin-right: 16px;
+    color: black;
+    font-size: 24px;
+}

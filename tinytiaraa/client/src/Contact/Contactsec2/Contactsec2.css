@@ -1,0 +1,157 @@
+.Contactsec2main {
+    padding: 20px 0;
+    width: 100%;
+    min-height: 80vh;
+    font-family: "Poppins", sans-serif;
+    background-color: #F3FFFD;
+    color: #333;
+}
+
+.Contactsec2main h1 {
+    text-align: center;
+    font-size: 1.9rem;
+    color: #000000;
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.Contactsec2main h1::after {
+    content: "";
+    width: 50px;
+    height: 4px;
+    background-color: #000000;
+    display: block;
+    margin: 0.5rem auto;
+    border-radius: 20px;
+}
+
+.Contactsec2conflex {
+    padding: 20px 0;
+    width: 100%;
+    min-height: 70vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.constcattsec2left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.constcattsec2left img {
+    margin-left: 50px;
+    width: 100%;
+    max-width: 500px;
+    height: 500px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px, rgba(0, 0, 0, 0.1) 0px 2px 4px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    object-fit: fill;
+}
+
+.constcattsec2left img:hover {
+    transform: scale(1.05);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 20px 40px;
+}
+
+.contactsec2right {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contactsec2rightcon {
+    text-align: center;
+}
+
+.contactsec2rightcon h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #006039;
+
+}
+
+.contactsec2rightcon p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+}
+
+.contactsec2rightcon iframe {
+    width: 70%;
+    height: 300px;
+    margin-top: 1rem;
+    border-radius: 10px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px;
+}
+
+.contactsec2rightcon button {
+    margin-top: 20px;
+    padding: 15px 30px;
+    background-color: #006039;
+
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contactsec2rightcon button:hover {
+    background-color: #098d58;
+
+    transform: translateY(-3px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.contactbtncenter {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 1080px) {
+    .constcattsec2left,
+    .contactsec2right {
+        width: 100%;
+        height: auto;
+        padding: 10px 20px;
+    }
+
+    .contactsec2rightcon h3 {
+        font-size: 1.8rem;
+    }
+   
+}
+
+@media (max-width: 880px) {
+    .Contactsec2main {
+        padding: 10px 0;
+    }
+
+    .Contactsec2conflex {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .constcattsec2left img {
+        max-width: 400px;
+        height: 400px;
+        margin-left: 0px;
+
+    }
+
+    .contactsec2rightcon iframe {
+        height: 250px;
+    }
+}

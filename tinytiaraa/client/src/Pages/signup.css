@@ -1,0 +1,174 @@
+.signuppagemaincon {
+    width: 100%;
+
+}
+
+.signuppagemaincon .singupcon {
+    margin: 20px auto;
+    width: 75%;
+    height: auto;
+    background: #FFFFFF;
+    border: 0.5px solid #5DC2B0;
+    border-radius: 37px;
+    display: flex;
+    gap: 20px;
+}
+
+.signuppagemaincon .singupcon .singupconleft {
+    width: 50%;
+    height: 100%;
+}
+
+.singupconleft .signuplogo {
+    display: flex;
+    justify-content: center;
+}
+
+.singupconleft .signuplogo img {
+    width: 220px;
+    height: 163px;
+    object-fit: contain;
+}
+
+.singupconleft .signupcontent {
+    margin-top: -20px;
+}
+
+.singupconleft .signupcontent h3 {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 42px;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #2F2F2F;
+}
+
+.singupconleft .signupcontent p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 42px;
+    text-align: center;
+
+    color: #2F2F2F;
+}
+
+.signupforfeield {
+    margin-left: 30px;
+    padding: 20px 30px;
+   
+}
+
+
+.signupforfeield .signupbtnnew button{
+    border: none !important;
+    background: linear-gradient(90deg, #098d58 0%, #006039 100%),linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)) !important;
+    letter-spacing: 2px;
+    transition: all 1s !important;
+}
+.signupforfeield .signupbtnnew button:hover{
+    border: none !important;
+    background: linear-gradient(90deg, #006039 0%,  #098d58 100%),linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)) !important;
+    letter-spacing: 2px;
+}
+
+
+.signuppagemaincon .singupcon .singupconright {
+    padding: 40px 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+.signuppagemaincon .singupconright .singupconrightcon{
+    width: 80%;
+    height: 600px;
+
+   
+}
+.signuppagemaincon .singupconright .singupconrightcon img{
+    width: 100%;
+    height: 600px;
+    border-radius: 30px;
+}
+
+@media (max-width:1300px) {
+    .signuppagemaincon .singupcon {
+        width: 85%;
+    }
+    .respinpadjust{
+        width: 100%  !important;
+    }
+    
+}
+
+@media (max-width:1080px) {
+    .signuppagemaincon .singupcon {
+        width: 95%;
+    }
+    .respinpadjust{
+        width: 100%  !important;
+    }
+    .singupconleft .signupcontent p {
+        font-size: 16px;
+    }
+    
+}
+
+
+@media (max-width:850px) {
+    .signuppagemaincon .singupcon {
+        width: 95%;
+        flex-direction: column-reverse;
+    }
+    .respinpadjust{
+        width: 80%  !important;
+    }
+    .singupconleft .signupcontent p {
+        font-size: 16px;
+    }
+    .signuppagemaincon .singupcon .singupconleft {
+        width: 100%;
+        height: auto;
+    }
+    .signuppagemaincon .singupcon .singupconright {
+        display: none;
+       
+    }
+}
+
+@media (max-width:600px) {
+ 
+    .respinpadjust{
+        width: 100%  !important;
+    }
+    .singupconleft .signupcontent p {
+        font-size: 15px;
+    }
+    .signupforfeield {
+        margin-left: 10px;       
+    }
+   
+}
+
+@media (max-width:600px) {
+ 
+    .respinpadjust{
+        width: 100%  !important;
+    }
+    .singupconleft .signupcontent p {
+        font-size: 13px;
+    }
+    .signupforfeield {
+        margin-left: 0px;       
+    }
+    .singupconleft .signupcontent h3 {
+        font-size: 22px;
+        line-height: 28px; 
+    }
+    .singupconleft .signuplogo img {
+        width: 180px;
+        height: 143px;
+        object-fit: contain;
+    }
+   
+}

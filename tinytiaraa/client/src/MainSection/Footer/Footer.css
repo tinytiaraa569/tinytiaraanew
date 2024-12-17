@@ -1,0 +1,194 @@
+.footermain{
+    padding: 10px 0;
+    width: 100%;
+    height: auto;
+    color: white;
+    background-color: #01463A;
+
+}
+.footer{
+    width: 100%;
+    height: auto;
+    color: white;
+    background-color: #01463A;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    border-bottom: 1px solid grey
+}
+.footerone{
+    width: 20%;
+    height: 200px;
+}
+.footermain .footerone img{
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    cursor: pointer;
+}
+.footertwo{
+    width: 25%;
+
+}
+.footerthree{
+    width: 25%;
+
+}
+.footerfour{
+    width: 25%;
+
+}
+.footer .footerheading{
+    font-size: 20px;
+    font-weight: 600;
+    padding: 18px 0;
+}
+.footerp{
+    padding: 18px 0 0 0;
+}
+.footericons{
+    font-size: 38px;
+}
+.footericonmain i{
+    cursor: pointer;
+    padding: 5px 18px 10px 0;
+}
+.footerconnect{
+    padding: 20px 0 0 0;
+}
+.footermenu ul li{
+    list-style-type: none;
+    padding: 8px 0;
+}
+
+.footermenu ul li a{
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+.footermenu ul li a::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: azure;
+    display: block;
+    position: absolute;
+    border-radius: 10px;
+    transition: all 1s;
+}
+ .footerfour ul li a::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: azure;
+    display: block;
+    position: absolute;
+    border-radius: 10px;
+    transition: all 1s;
+
+ }
+.footermenu ul li a:hover:after , .footerfour ul li a:hover::after {
+    width: 100%;
+
+}
+.footericons .footericonmain a:hover{
+    transform: scale(1.15);
+    transition: all 0.5s;
+
+}
+.footerfour ul li a{
+    text-decoration: none;
+    color: white;
+    position: relative;
+
+}
+.footerfour ul li{
+    list-style: none;
+    padding: 10px 0;
+}
+.footericonmain .fa-facebook{
+    color: rgb(44, 114, 227);
+}
+.footericonmain .fa-youtube{
+    color: rgb(234, 58, 32);
+}
+.footericonmain .fa-whatsapp{
+    color: rgb(80, 226, 70);
+}
+.footericonmain .fa-instagram{
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    background-clip: text;
+    color: transparent;
+}
+.footericonmain .fa-envelope{
+    color: rgb(255, 255, 255);
+}
+.footericonmain .fa-phone{
+    color: rgb(255, 255, 255);
+}
+.footericonmain i:hover{
+    transition: all 1s;
+    transform: scale(1.1);
+
+}
+.copyright p{
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 18px;
+}
+
+@media (max-width:980px) {
+    .footer{
+        flex-wrap: wrap;
+    }
+    .footerone{
+        width: 80%;
+        text-align: center;
+        border-bottom: 2px solid grey;
+    }
+    .footertwo{
+        width: 30%;
+    }
+    .footerthree{
+        width: 30%;
+    
+    }
+    .footerfour{
+        width: 30%;
+    
+    }
+    
+}
+@media (max-width:550px) {
+    .footer{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .footerone,.footertwo,.footerthree{
+        width: 80%;
+        padding-bottom: 10px;
+
+        border-bottom: 2px solid grey;
+    }
+    .footerfour{
+        width: 80%;
+        padding-bottom: 20px;
+
+    }
+    .footerone{
+        text-align: center;
+
+    }
+    .footerconnect{
+        font-size: 20px;
+        text-align: center;
+
+    }
+    .footerheading ,.footericons{
+        text-align: center;
+    }
+   
+}

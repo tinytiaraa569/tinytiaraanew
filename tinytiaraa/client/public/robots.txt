@@ -1,0 +1,41 @@
+# Allow all web crawlers to access the main public pages
+User-agent: *
+Disallow: /login
+Disallow: /sign-up
+Disallow: /profile
+Disallow: /user/order/
+Disallow: /user/track/order/
+Disallow: /inbox
+Disallow: /shop-create
+Disallow: /seller/activation/
+Disallow: /shop-login
+Disallow: /admin-manage/
+Disallow: /dashboard
+Disallow: /settings
+Disallow: /catalog
+Disallow: /dashboard-orders
+Disallow: /dashboard-create-product
+Disallow: /dashboard-create-event
+Disallow: /dashboard-events
+Disallow: /dashboard-coupons
+Disallow: /dashboard-products
+Disallow: /dashboard-refunds
+Disallow: /dashboard-referral
+Disallow: /dashboard-requests
+Disallow: /dashboard-Contactus
+Disallow: /dashboard-ratecard
+Disallow: /dashboard-allusers
+Disallow: /dashboard-allspin
+Disallow: /dashboard-currency
+Disallow: /editproduct/
+Disallow: /dashboard-messages
+Disallow: /order/
+Disallow: /checkout-page
+Disallow: /payment
+Disallow: /cart
+
+Allow: /
+
+
+# Sitemap URL
+Sitemap: https://www.tinytiaraa.com/sitemap.xml

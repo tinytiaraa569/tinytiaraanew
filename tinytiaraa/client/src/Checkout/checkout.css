@@ -1,0 +1,146 @@
+.contact-information {
+    padding: 24px 16px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 10px;
+}
+
+.int-emailcheck {
+    width: 100%;
+    height: 40px;
+    padding: 8px;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(231, 231, 233);
+    font-family: Poppins, sans-serif;
+    font-size: 13px !important;
+    border-radius: 0px !important;
+}
+
+.int-emailcheck:focus {
+    outline: none;
+    border: 1px solid rgb(69, 199, 231);
+    font-family: Poppins, sans-serif;
+
+}
+
+.button-wrapperdiv {
+    max-width: 300px;
+
+    background: #006039;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.45px;
+    transition: all 0.5s ease-in-out 0s;
+    padding: 0px 24px;
+    position: relative;
+    overflow: hidden;
+    color: white;
+}
+
+.button-wrapperdiv button {
+    width: 100%;
+    padding: 10px 5px;
+}
+.button-wrapperdiv:hover{
+    
+    background: #098d58;
+}
+.checkoutright {
+    padding: 8px;
+    border: 1px solid rgb(231, 231, 233);
+    margin-bottom: 8px;
+    padding: 16px 0px 16px 24px;
+    margin-bottom: 16px;
+}
+
+.image-section {
+
+    min-width: 124px;
+    width: 124px;
+    height: auto;
+}
+
+.detail-section {
+    padding: 10px 15px !important;
+    width: 70%;
+    height: auto;
+
+}
+
+.ordercardsec {
+    background: rgb(255, 255, 255);
+
+    width: 95%;
+    margin-bottom: 8px;
+    height: auto;
+}
+
+@media (max-width:1200px) {
+
+    .checkoutright {
+        width: 40% !important;
+    }
+}
+
+
+@media (max-width:1000px) {
+    .checkoutsectionmainlast {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .checkoutleft {
+        width: 80% !important;
+    }
+    .checkoutright {
+        width: 80% !important;
+    }
+    
+}
+@media (max-width:650px) {
+    .sercol{
+        flex-direction: column !important;
+    }
+    .adjustinpser{
+        width: 80% !important;
+    }
+    
+}
+
+@media (max-width:550px) {
+    .ordercardsec {
+       flex-direction: column;
+        height: auto;
+    }
+    .image-section {
+        margin: auto;
+        min-width: 154px;
+        width: 154px;
+        height: auto;
+    }
+    
+    .detail-section {
+        padding: 10px 15px !important;
+        width: 100%;
+        height: auto;
+    
+    }
+    .securehecoutsize{
+        font-size: 14px !important;
+    }
+    .detail-section h3{
+        font-size: 12px !important;
+    }
+    .detail-section span{
+        font-size: 11px !important;
+    }
+    .checkoutleft {
+        width: 88% !important;
+    }
+    .checkoutright {
+        width: 88% !important;
+    }
+    .securehecoutsizehead{
+        margin-left: -7px;
+        font-size: 16px !important;
+    }
+}

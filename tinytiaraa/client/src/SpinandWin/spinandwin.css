@@ -1,0 +1,138 @@
+.balloon {
+    position: absolute  ;
+    padding: 10px 20px ;
+    border-radius: 8px ;
+    color: white ;
+    font-size: 1.2rem ;
+    text-align: center ;
+  }
+  
+  
+@keyframes floatUp {
+    0% {
+      transform: translateY(0) ;
+      opacity: 1 ;
+    }
+    70% {
+      transform: translateY(-300px) ;
+      opacity: 1 ;
+    }
+    100% {
+      transform: translateY(-600px) ;
+      opacity: 0 ;
+    }
+  }
+  
+  @keyframes floatRight {
+    0% {
+      transform: translate(0, 0) ;
+      opacity: 1 ;
+    }
+    70% {
+      transform: translate(100px, -300px) ;
+      opacity: 1 ;
+    }
+    100% {
+      transform: translate(100px, -600px) ;
+      opacity: 0 ;
+    }
+  }
+  
+  .burst {
+    animation: burst 0.5s forwards ;
+  }
+  
+  @keyframes burst {
+    0% {
+      transform: scale(1) ;
+    }
+    100% {
+      transform: scale(3) ;
+      opacity: 0 ;
+    }
+  }
+
+
+@media (max-width:450px) {
+
+    .spinandwinheading{
+        font-size: 24px ;
+    }
+    .spinandwinpara{
+        font-size: 16px;
+    }
+    .adjustspnimg{
+        top: 19% !important;
+        left: 15% !important;
+        object-fit: contain;
+    }
+    
+}
+@media (max-width:400px) {
+
+    .spinandwinheading{
+        font-size: 22px !important;
+    }
+    .spinandwinpara{
+        font-size: 14px !important;
+    }
+    .adjustspnimg{
+        width: 50px !important;
+        height: 70px !important;
+        top: 22% !important;
+        left: 13% !important;
+        object-fit: contain;
+    }
+    
+}
+@media (max-width:370px) {
+
+    .spinandwinheading{
+        font-size: 22px !important;
+    }
+    .spinandwinpara{
+        font-size: 14px !important;
+    }
+    .adjustspnimg{
+        width: 50px !important;
+        height: 70px !important;
+        top: 24% !important;
+        left: 14% !important;
+        object-fit: contain;
+    }
+    
+}
+@media (max-width:350px) {
+
+    .spinandwinheading{
+        font-size: 21px !important;
+    }
+    .spinandwinpara{
+        font-size: 13px !important;
+    }
+    .adjustspnimg{
+        width: 45px !important;
+        height: 70px !important;
+        top: 26% !important;
+        left: 13% !important;
+        object-fit: contain;
+    }
+    
+}
+@media (max-width:320px) {
+
+    .spinandwinheading{
+        font-size: 21px !important;
+    }
+    .spinandwinpara{
+        font-size: 13px !important;
+    }
+    .adjustspnimg{
+        width: 42px !important;
+        height: 65px !important;
+        top: 26% !important;
+        left: 14% !important;
+        object-fit: contain;
+    }
+    
+}

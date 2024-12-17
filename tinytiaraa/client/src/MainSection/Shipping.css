@@ -1,0 +1,107 @@
+.shippingsection{
+    padding: 10px 0;
+    /* background-color: #e8e4e4; */
+    /* background-color: aliceblue; */
+
+    
+}
+.shippingsection h1{
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+.shippingsection h1::after{
+    content: "";
+    width: 100%;
+    height: 5px;
+    background-color: bisque;
+    
+}
+.shippingcard{
+    margin: 10px 0;
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    background-color: rgb(243, 242, 242);
+}
+.shippingcard .shippingimg{
+    width: 50%;
+    height: 100%;
+}
+.shippingcard .shippingimg img{
+    width: 100%;
+    height: 99%;
+    border-radius: 12px;
+    object-fit: fill;
+    box-shadow: 4px 2px 8px rgba(0, 0, 0, 0.527);
+}
+.shippingcard .shippingcontent{
+    font-family: "Poppins", sans-serif;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.shippingcard .shippingcontent button{
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    padding: 14px 25px;
+    background-color: rgb(107, 159, 237);
+    border: none;
+    border-radius: 30px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.shippingcard .shippingcontent button:hover{
+    
+    background-color: rgb(72, 126, 206);
+   
+
+}
+.shooingadjust h2{
+    font-size: 30px;
+    font-weight: 500;
+}
+.shooingadjust p{
+    
+    padding: 15px 0;
+   
+
+}
+.shooingadjust{
+    padding: 0px 30px;
+}
+
+@media (max-width:769px) {
+    .shippingcard{
+        padding: 20px 0;
+        height: 100%;
+       flex-direction: column;
+    }
+    .shippingcard .shippingimg{
+        margin: auto;
+        width: 90%;
+        height: 50%;
+    }
+    .shooingadjust h2{
+        padding: 20px 0 0 0;
+    }
+    .shippingcard .shippingimg img{
+        width: 100%;
+        height: 80%;
+        border-radius: 20px;
+        box-shadow: 5px 5px 5px rgb(62, 62, 62);
+    }
+    .shippingcard .shippingcontent{
+       text-align: center;
+        width: 100%;
+    }
+    .shooingadjust p{
+        width: 100%;
+        padding: 15px 0;
+    }
+}

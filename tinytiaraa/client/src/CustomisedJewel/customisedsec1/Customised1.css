@@ -1,0 +1,199 @@
+.Customisedsec1 {
+    font-family: "Poppins", sans-serif;
+    width: 100%;
+    height: 80vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.226), rgba(0, 0, 0, 0.317)), url(https://lirp.cdn-website.com/48f148a6/dms3rep/multi/opt/15-1183b871-2880w.png);
+    background-size: 100% 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.customisedcon1 {
+    color: white;
+}
+
+.customisedcon1 h1 {
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+.sliderseccustom {
+    position: relative;
+    width: 100%;
+}
+
+.sliderseccustom img {
+    width: 100%;
+    
+}
+
+.sliderseccustom::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Black overlay with 50% opacity */
+    z-index: 1; /* Ensure the overlay is above the image */
+}
+
+.sliderseccustom img {
+    position: relative;
+    z-index: 0; /* Ensure the image is below the overlay */
+}
+
+.sliderseccustom .text-overlay {
+    position: absolute;
+    top: 55%; /* Center the text vertically */
+    left: 50%; /* Center the text horizontally */
+    transform: translate(-80%, -10%); /* Adjust for centering */
+    color: white; /* White text color for contrast */
+    z-index: 2; /* Ensure text is above the overlay */
+    text-align: center; /* Center-align the text */
+    padding: 20px; /* Add padding for spacing */
+    font-size: 60px; /* Adjust font size as needed */
+}
+.sliderseccustom .text-overlay h1{
+    letter-spacing: 1px;
+    font-family: "Great Vibes", cursive !important;
+}
+@media (max-width:1480px) {
+    .sliderseccustom .text-overlay {
+        position: absolute;
+        top: 55%; /* Center the text vertically */
+        left: 50%; /* Center the text horizontally */
+        transform: translate(-60%, -10%); /* Adjust for centering */
+        color: white; /* White text color for contrast */
+        z-index: 2; /* Ensure text is above the overlay */
+        text-align: center; /* Center-align the text */
+        padding: 20px; /* Add padding for spacing */
+        font-size: 50px; /* Adjust font size as needed */
+        width: 100%;
+    }
+    .sliderseccustom .text-overlay h1{
+        letter-spacing: 1px;
+        font-family: "Great Vibes", cursive !important;
+    }
+    
+}
+
+@media (max-width:980px) {
+    .sliderseccustom .text-overlay {
+        position: absolute;
+        top: 55%; /* Center the text vertically */
+        left: 50%; /* Center the text horizontally */
+        transform: translate(-60%, -10%); /* Adjust for centering */
+        color: white; /* White text color for contrast */
+        z-index: 2; /* Ensure text is above the overlay */
+        text-align: center; /* Center-align the text */
+        padding: 20px; /* Add padding for spacing */
+        font-size: 50px; /* Adjust font size as needed */
+    }
+    .sliderseccustom .text-overlay h1{
+        letter-spacing: 1px;
+        font-family: "Great Vibes", cursive !important;
+    }
+    
+}
+@media (max-width:840px) {
+    .sliderseccustom .text-overlay {
+        position: absolute;
+        top: 55%; /* Center the text vertically */
+        left: 23%; /* Center the text horizontally */
+        transform: translate(-35%, -10%); /* Adjust for centering */
+        color: white; /* White text color for contrast */
+        z-index: 2; /* Ensure text is above the overlay */
+        text-align: center; /* Center-align the text */
+        padding: 20px; /* Add padding for spacing */
+        font-size: 50px; /* Adjust font size as needed */
+        width: 80%;
+    }
+    .sliderseccustom .text-overlay h1{
+        letter-spacing: 1px;
+        font-family: "Great Vibes", cursive !important;
+    }
+    
+}
+
+@media (max-width:650px) {
+    .sliderseccustom .text-overlay {
+        position: absolute;
+        top: 65%; /* Center the text vertically */
+        left: 35%; /* Center the text horizontally */
+        transform: translate(-50%, -50%); /* Adjust for centering */
+        color: white; /* White text color for contrast */
+        z-index: 2; /* Ensure text is above the overlay */
+        text-align: center; /* Center-align the text */
+        padding: 20px; /* Add padding for spacing */
+        font-size: 40px; /* Adjust font size as needed */
+    }
+}
+@media (max-width:450px) {
+    .sliderseccustom .text-overlay {
+        position: absolute;
+        top: 65%; /* Center the text vertically */
+        left: 37%; /* Center the text horizontally */
+        transform: translate(-50%, -50%); /* Adjust for centering */
+        color: white; /* White text color for contrast */
+        z-index: 2; /* Ensure text is above the overlay */
+        text-align: center; /* Center-align the text */
+        padding: 20px; /* Add padding for spacing */
+        font-size: 25px; /* Adjust font size as needed */
+    }
+}
+
+@media (max-width:350px) {
+    .sliderseccustom .text-overlay {
+        position: absolute;
+        top: 65%; /* Center the text vertically */
+        left: 30%; /* Center the text horizontally */
+        transform: translate(-50%, -50%); /* Adjust for centering */
+        color: white; /* White text color for contrast */
+        z-index: 2; /* Ensure text is above the overlay */
+        text-align: center; /* Center-align the text */
+        padding: 20px; /* Add padding for spacing */
+        font-size: 20px; /* Adjust font size as needed */
+    }
+}
+
+
+/* @media (max-width:700px) {
+    .customisedcon1 h1 {
+        font-size: 30px;
+        letter-spacing: 2px;
+    }
+
+    .Customisedsec1 {
+
+        height: 70vh;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.226), rgba(0, 0, 0, 0.317)), url(https://lirp.cdn-website.com/48f148a6/dms3rep/multi/opt/15-1183b871-2880w.png);
+        background-size: 100% 70vh;
+
+    }
+
+}
+
+
+@media (max-width:550px) {
+    .customisedcon1 h1 {
+        font-size: 22px;
+        letter-spacing: 2px;
+    }
+    .Customisedsec1 {
+        height: 400px;
+        background-size:  100% 400px;
+        background-repeat: no-repeat;
+      
+    }
+
+}
+
+@media  (max-width:480px) {
+    .Customisedsec1 {
+        height: 60vh;
+        background-size: 100% 60vh;
+      
+    }
+}
+ */

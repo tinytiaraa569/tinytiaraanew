@@ -1,0 +1,76 @@
+.parent-container {
+    width: 100%; /* Adjust or set a specific width if needed */
+}
+.createproduct{
+    margin-top: 40px;
+
+    width: 90% !important;
+}
+
+.image-container {
+    width: 900px !important;
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)) !important;
+    gap: 10px;
+    max-height: 55vh !important; /* Adjust based on your needs */
+    overflow-x: auto;
+    overflow-y: auto;
+    padding: 10px !important;
+    background: #ffffff !important; /* Optional background color */
+    border: 1px solid #ddd !important; /* Optional border */
+}
+
+.image-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-item img {
+    transform: scale(1.1);
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border: 1px solid rgb(243, 242, 242);
+}
+
+.lineforcreate::after{
+    content: "";
+    display: block;
+    width: 170px;
+    height: 2px;
+    border-radius: 10px;
+    background-color: rgba(125, 125, 125, 0.7);
+    margin: 2px auto;
+
+}
+
+@media (max-width : 1400px) {
+    .createproduct{
+        margin-top: 40px;
+
+        width: 70% !important;
+    }
+}
+@media (max-width : 1200px) {
+    .createproduct{
+        margin-top: 40px;
+
+        width: 80% !important;
+    }
+}
+@media (max-width : 1080px) {
+    .createproduct{
+        margin-top: 40px;
+
+        width: 80% !important;
+    }
+}
+@media (max-width : 780px) {
+    .createproduct{
+        margin-top: 40px;
+        width: 85% !important;
+        height: 80vh !important;
+        justify-content: flex-start !important;
+        align-items: flex-start !important;
+    }
+}

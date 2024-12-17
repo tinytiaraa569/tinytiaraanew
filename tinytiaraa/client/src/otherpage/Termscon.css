@@ -1,0 +1,34 @@
+.TermsConpage{
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    padding: 10px 50px;
+    display: flex;
+    justify-content: center;
+    padding: 25px 0;
+
+}
+.TermsConsection{
+    padding: 18px 0;
+}
+.conditions ul li{
+    margin-left: 20px;
+    list-style-type : disc;
+}
+.conditions ol li::marker{
+    padding: 0 4px;
+    font-weight: 800;
+}
+.TermsConAdjust{
+    width: 70%;
+}
+
+.conditonssubsection{
+    padding: 15px 0;
+
+}
+.conditonssubsection h3{
+    font-weight: 700;
+}
+.boldspan{
+    font-weight: 500;
+}

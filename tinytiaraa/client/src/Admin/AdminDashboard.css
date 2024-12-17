@@ -1,0 +1,120 @@
+.Admindashmain{
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    background-color: aliceblue;
+
+}
+.admindashboard h1{
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    color: black;
+    font-weight: 600;
+}
+.Admindashmain{
+    width: 100%;
+    /* height: 100vh; */
+    display: flex;
+    
+}
+.dashboardsectionleft{
+    width: 25%;
+    height: auto;
+    background-color: #1b2431;
+
+}
+.dashboardsectionright{
+    width: 75%;
+    height: 100%;
+    background-color: rgb(233, 190, 135);
+}
+.categorylist .categorylistheader{
+    width: 400px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+}
+.categorylist .categorylistsshow{
+    width: 400px;
+    background-color: #ddd;
+
+}
+.categorylistheader span{
+    padding: 10px 16px;
+    width: 50%;
+    border: 1px solid rgb(90, 89, 89);
+}
+
+.categorylistsshow .categorylistflex{
+    display: flex;
+    justify-content: space-evenly;
+}
+.categorylistflex span{
+    padding: 10px 16px;
+    width: 50%;
+    border: 1px solid black;
+}
+.categorybtn button{
+    padding: 5px 10px;
+    margin: 0 6px;
+
+}
+.categoryform h2 ,.categorylist h2{
+    font-family: "Poppins", sans-serif;
+    display: inline-block;
+
+}
+.categoryform{
+    padding: 10px 0;
+}
+.categoryform h2::after , .categorylist h2::after{
+    content: "";
+    width: 80px;
+    height: 4px;
+    background-color: black;
+    display: block;
+    margin: auto;
+    border-radius: 20px;
+}
+.categorlistmainsection{
+    padding: 20px 0;
+}
+.categorylist{
+    padding: 5px 18px;
+}
+.Selectwidthman{
+    margin: 5px 10px;
+    border-radius: 5px;
+    width: 50%;
+    background-color: rgb(223, 217, 217);
+}
+.productdetailform input,.productdetailform textarea{
+   background: rgba(255,255,255,0.1);
+  border: none;
+  font-size: 16px;
+  height: auto;
+  margin: 0;
+  outline: 0;
+  padding: 15px;
+  width: 60%;
+  background-color: #e8eeef;
+  color: #8a97a0;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  margin-bottom: 30px;
+
+}
+.proimg label , pr{
+    display: inline-block;
+    margin: 20px 30px;
+    padding: 10px 20px;
+    background-color: #8a97a0;
+    border-radius: 10px;
+    font-family: "Poppins", sans-serif;
+
+}
+.productdetailform{
+    border: 1px solid grey;
+    padding: 20px 50px;
+    font-family: "Poppins", sans-serif;
+
+}

@@ -1,0 +1,128 @@
+.followus {
+    padding: 20px 0;
+    width: 100%;
+    height: 213px;
+    background: #FFF7F5;
+}
+.socialvariants{
+    padding: 20px 0 ;
+    width: 100%;
+    gap: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.followus .followheading h1 {
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #01463A;
+
+}
+
+.followus .followheading p {
+    color: #818181;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.followus .socialvariants .socailcardfollow {
+    width: 217px;
+    height: 40px;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px 0px #00000040;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s;
+
+}
+
+.followus .socialvariants .socailcardfollow:hover {
+    transform: scale(1.1);
+    
+
+}
+.socialiconfollow{
+    width: 30px;
+    height: 30px;
+}
+.followus .socialfb{
+    opacity: 70%;
+    background: #3B5998;
+}
+.followus .socialwhatsapp{
+    opacity: 70%;
+    background: #0CB44B;
+}
+.followus .socialinsta{
+    opacity: 70%;
+    background: #D22E8F;
+}
+.followus .socialpintrest{
+    opacity: 70%;
+    background: #E60023;
+
+}
+.followus .socialyoutube{
+    opacity: 70%;
+    background: #e32542;
+}
+
+.followus .socialfb:hover{
+    opacity: 100%;
+   
+}
+.followus .socialwhatsapp:hover{
+    opacity: 100%;
+}
+.followus .socialinsta:hover{
+    opacity: 100%;
+}
+.followus .socialpintrest:hover{
+    opacity: 100%;
+
+}
+.followus .socialyoutube:hover{
+    opacity: 100%;
+
+}
+
+
+
+.socailcardfollow span {
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+
+}
+
+@media (max-width:1080px) {
+    .followus {
+        padding: 10px 0 20px 0;
+       
+        height: auto;
+        
+    }
+    .followus .followheading h1 {
+        font-size: 25px;
+    
+    }
+    .followus .followheading p {
+        font-size: 18px;
+        line-height: 20px;
+        margin-bottom: 10px;
+        
+    }
+    
+}

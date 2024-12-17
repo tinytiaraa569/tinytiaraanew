@@ -1,0 +1,40 @@
+.Aboutsection4 {
+    font-family: "Poppins", sans-serif;
+    width: 100%;
+    background-color: #F3FFFD;
+
+    padding: 25px 0 40px 0;
+
+}
+
+.Aboutsection4 .ourvisionsec h4 {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 500;
+    line-height: 52px;
+    letter-spacing: 2px;
+    color: #01463A;
+
+}
+
+.Aboutsection4 .ourvisionsec h4::after {
+    content: "";
+    width: 180px;
+    height: 1px;
+    background-color: #5DC2B0;
+    display: block;
+    margin: 5px auto;
+
+}
+.ourvisionsec{
+    text-align: center;
+
+}
+.Aboutsection4 .ourvisionsec p {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 34px;
+    width: 75%;
+
+}

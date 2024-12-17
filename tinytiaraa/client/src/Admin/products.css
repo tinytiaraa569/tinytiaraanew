@@ -1,0 +1,102 @@
+.productgridcon {
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr); /* Responsive grid with minimum item width of 250px */
+    justify-content:center;
+    gap: 30px;
+    font-family: "Poppins", sans-serif;
+}
+
+.productgridcon .procard {
+    padding: 0px 10px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden; /* Ensure rounded corners are applied properly */
+    height: 480px;
+}
+
+.productgridcon .procard:hover {
+    transform: translateY(-5px); /* Lift card slightly on hover */
+}
+
+
+.procard h1.product-heading {
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.procard .product-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333333;
+}
+
+.procard .product-short-description {
+    font-size: 14px;
+    color: #666666;
+    margin-top: 10px;
+}
+
+.textadjustcard {
+    text-decoration: none !important;
+    color: #333333;
+}
+.procard .product-img {
+    width: 100%;
+    height: 250px;
+}
+
+.procard .product-img img {
+    width: 100%;
+    height: 250px;
+    
+}
+.product-short-description{
+    padding: 0px 10px;
+}
+.product-price{
+    padding: 0px 10px;
+}
+@media (max-width:980px) {
+    .productgridcon {
+        grid-template-columns: repeat(2,45%); /* Responsive grid with minimum item width of 250px */
+        
+    }
+    .procard .product-img {
+        width: 100%;
+        height: 200px;
+    }
+    
+    .procard .product-img img {
+        width: 100%;
+        height: 200px;
+        
+    }
+    
+}
+@media (max-width:580px) {
+    .productgridcon {
+        grid-template-columns: repeat(1,95%); /* Responsive grid with minimum item width of 250px */
+        
+    }
+    .procard .product-img {
+        width: 100%;
+        height: 200px;
+    }
+    
+    .procard .product-img img {
+        width: 100%;
+        height: 200px;
+        
+    }
+    
+.productgridcon .procard {
+    padding: 0 0 10px 0;
+    height: auto;
+}
+
+    
+}

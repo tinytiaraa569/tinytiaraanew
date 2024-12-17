@@ -1,0 +1,169 @@
+.Aboutsection5 {
+    font-family: "Poppins", sans-serif;
+    width: 100%;
+    padding: 15px 0 20px 0;
+}
+
+.Aboutsection5 .association h3 {
+    font-size: 35px;
+    font-weight: 500;
+    line-height: 52px;
+    letter-spacing: 2px;
+    color: #01463A;
+    text-align: center;
+}
+
+.Aboutsection5 .assocflex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    padding: 10px 0 20px 0;
+}
+
+.assocflexadjust {
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.associmgs img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    max-height: 90px;
+    object-fit: contain;
+}
+
+.Aboutsection5 .sec5sub {
+    background-color: #F3FFFD;
+    height: 133px;
+}
+
+.sec5sub .sec5flex h6 {
+    color: #1F1F1F;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 52px;
+    text-align: center;
+}
+
+.sec5flex .sec5inp input {
+    width: 235px;
+    height: 56px;
+    border-radius: 8px;
+    border: 2px solid #01463A;
+    box-shadow: 0px 2px 8px 0px #00000040;
+    padding: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.sec5flex {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.sec5flex button {
+    width: 235px;
+    height: 56px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #01463A;
+    background-color: #01463A;
+    color: #fff;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.sec5inp::placeholder {
+    color: #727272;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+}
+
+.sec5flex button:hover {
+    background-color: #017c61;
+    transform: translateY(-2px);
+}
+
+.sec5flex button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px #80e8d4;
+}
+
+.sec5flex .sec5inp input:hover {
+    border-color: #017c61;
+}
+
+.sec5flex .sec5inp input:focus {
+    outline: none;
+    border-color: #017c61;
+    box-shadow: 0 0 0 4px #80e8d4;
+}
+@media (max-width: 1180px) {
+    .sec5flex{
+        flex-wrap: wrap;
+    }
+    .Aboutsection5 .sec5sub {
+        padding: 20px 0;
+        background-color: #F3FFFD;
+        height: auto;
+    }
+
+}
+
+@media (max-width: 1080px) {
+    .assocflexadjust {
+        width: 90%;
+    }
+
+    .sec5flex h6 {
+        font-size: 20px;
+    }
+
+}
+@media (max-width: 900px) {
+    .assocflexadjust {
+        width: 90%;
+    }
+
+    .sec5flex h6 {
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width: 750px) {
+    .assocflexadjust {
+        width: 100%;
+    }
+
+    .associmgs img {
+        max-width: 140px;
+        max-height: 70px;
+    }
+
+   
+}
+
+@media (max-width: 480px) {
+    .associmgs img {
+        max-width: 120px;
+        max-height: 60px;
+    }
+
+    .sec5flex h6 {
+        font-size: 16px;
+    }
+
+}

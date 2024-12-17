@@ -1,0 +1,29 @@
+.userdashmain{
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    background-color: aliceblue;
+
+}
+.userdashboard h1{
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    color: black;
+    font-weight: 600;
+}
+.userdashmain{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    
+}
+.userdashboardsectionleft{
+    width: 25%;
+    height: 100%;
+}
+.userdashboardsectionright{
+    width: 75%;
+    height: 100%;
+}
+.userdashboardsectionright h2{
+    text-align: center;
+}

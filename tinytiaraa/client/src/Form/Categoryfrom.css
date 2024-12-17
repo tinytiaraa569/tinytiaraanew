@@ -1,0 +1,30 @@
+.categoryform{
+    background-color: #ddd;
+    padding: 10px 20px;
+    font-family: "Poppins", sans-serif;
+    margin: 10px 0 20px 0;
+   
+
+}
+.categoryformmain form input{
+    font-family: "Poppins", sans-serif;
+
+    width: 350px;
+    padding: 7px 15px;
+
+}
+.categoryformmain button{
+    margin: 0 8px;
+    padding: 7px 15px;
+    background-color: black;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    border-radius: 20px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    cursor: pointer;
+
+}
+.categoryfrombtnsection{
+    margin: 10px 0;
+}
