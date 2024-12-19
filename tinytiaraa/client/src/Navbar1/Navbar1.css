@@ -78,12 +78,13 @@
 
 .navbar1 .logo img {
     cursor: pointer;
-    padding-top: 5px;
+    /* padding-top: 5px; */
     width: 200px;
     height: 60px;
     object-fit: contain;
-    transform: scale(2);
+    transform: scale(2.15);
     transition: transform 0.3s ease;
+    margin-top: 13px;
 }
 
 .navbar1 .menu {
@@ -203,7 +204,9 @@
 
 .mobile-nav .logo img {
     cursor: pointer;
-    transform: scale(1.5);
+    transform: scale(2.01);
+    margin-top: 13px;
+    overflow: hidden;
 
 }
 

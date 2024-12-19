@@ -889,7 +889,7 @@ function ProductsPage() {
       </button> */}
        <button
       onClick={toggleFilterVisibility}
-      className="flex items-center bg-gray-200 hover:bg-gray-300 text-gray-700 p-2 rounded-lg border border-gray-400 shadow-sm text-[12px] font-medium transition-all duration-150 ease-in-out sm:p-2.5 sm:text-base md:p-3 md:text-[14px]"
+      className="flex items-center mt-3 bg-gray-200 hover:bg-gray-300 text-gray-700 p-1 rounded-lg border border-gray-400 shadow-sm text-[12px] font-medium transition-all duration-150 ease-in-out sm:p-1.5 sm:text-base md:p-1.5 md:text-[14px]"
     >
       <span>{isFilterVisible ? "Hide" : "Show"} filter</span>
       {isFilterVisible ? (

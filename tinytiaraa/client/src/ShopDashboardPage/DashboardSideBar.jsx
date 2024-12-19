@@ -335,6 +335,7 @@ const DashboardSideBar = ({active}) => {
     { text: "Currency", icon: <CurrencyExchangeIcon />, path: "/dashboard-currency",active:17 },
     { text: "Analytics", icon: <PollIcon />, path: "/dashboard-analytics",active:18 },
 
+    { text: "Popup Manager", icon: <ReferralIcon />, path: "/dashboard-popup" ,active:19},
 
    
   ];

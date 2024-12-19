@@ -813,8 +813,8 @@ function Navbar1() {
 
 
                         <div>
-                            <div className="logo py-1" onClick={() => navigate("/")}>
-                                <img className='shadowlogonav' loading='lazy' src="https://backend.tinytiaraa.com:8000/uploads/images/logowebsite/pgqpod1dbwdxo4kudbjl.webp" alt="" />
+                            <div className="logo  !overflow-hidden" onClick={() => navigate("/")}>
+                                <img className='shadowlogonav' loading='lazy' src="https://backend.tinytiaraa.com:8000/uploads/images/logowebsite/logo.gif" alt="" />
                             </div>
                         </div>
 
@@ -1016,11 +1016,18 @@ function Navbar1() {
                         <BiMenuAltLeft size={40} className='ml-4' onClick={() => setOpen(true)} />
                     </div>
 
-                    <div className="logo pt-2" onClick={() => {
+                    {/* <div className="logo pt-2" onClick={() => {
                         setbars(false)
                         navigate("/")
                     }} >
                         <img loading='lazy' className='w-[150px] h-[60px] object-contain' src="https://backend.tinytiaraa.com:8000/uploads/images/logowebsite/pgqpod1dbwdxo4kudbjl.webp" alt="" />
+                    </div> */}
+
+                    <div className="logo !overflow-hidden" onClick={() => {
+                        setbars(false)
+                        navigate("/")
+                    }} >
+                        <img loading='lazy ' className='w-[150px] h-[57px] object-contain' src="https://backend.tinytiaraa.com:8000/uploads/images/logowebsite/logo.gif" alt="" />
                     </div>
 
                     <div>

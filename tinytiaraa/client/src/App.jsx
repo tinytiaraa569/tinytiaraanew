@@ -28,7 +28,7 @@ import CertificationPolicy from './otherpage/CertificationPolicy.jsx'
 import LoginPage from './Component/LoginPage.jsx'
 import SignupPage from './Component/SignupPage.jsx'
 import ActivationPage from './Component/ActivationPage.jsx'
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 import { loadSeller, loadUser } from './redux/actions/user.jsx';
 import ProductsPage from './ProductsPage/ProductsPage.jsx';
@@ -105,6 +105,10 @@ import Shopalldataanalytics from './shopanalyticsdata/Shopalldataanalytics';
 import ChristmasTheme from './Christmas/ChristmasTheme';
 import GlobalSnowfall from './Christmas/ChristmasTheme';
 import SantaLottie from './Christmas/SantaClaus';
+import ImagePopup from './ImagePopup/ImagePopup';
+import Shopallpopup from './ShopAllPopup/Shopallpopup';
+import axios from 'axios';
+import { server } from './server';
 
 
 
@@ -213,6 +217,9 @@ function App() {
 
     location.pathname.startsWith('/dashboard/categories/view/:categoryId') ||
     location.pathname.startsWith('/dashboard-analytics') ||
+    location.pathname.startsWith('/dashboard-popup') ||
+
+    
 
 
 
@@ -274,7 +281,82 @@ function App() {
   }, []); // Only run on initial mount
 
 
- 
+  const [showPopup, setShowPopup] = useState(false);
+  const [livePopup, setLivePopup] = useState(null); // Store live popup data
+
+  useEffect(() => {
+    const fetchPopups = async () => {
+      try {
+        // Fetch popups from the API
+        const response = await axios.get(`${server}/get-allpopup`);
+        const popups = response.data.popup;
+        
+        // Find the popup that is live
+        const livePopup = popups.find(popup => popup.isLive === true);
+        
+        if (livePopup) {
+          setLivePopup(livePopup); // Store the live popup
+          
+          // Get the timestamp of when the popup was shown
+          const popupTimestamp = localStorage.getItem("popupTimestamp");
+
+          // Get the current time
+          const currentTime = new Date().getTime();
+          const threeDaysInMillis = 3 * 24 * 60 * 60 * 1000; // 3 days in milliseconds
+
+          // If the popup was shown more than 3 days ago or it's the first time visit
+          if (!popupTimestamp || currentTime - popupTimestamp > threeDaysInMillis) {
+            setShowPopup(true);
+            localStorage.setItem("popupTimestamp", currentTime.toString()); // Set the new timestamp
+            localStorage.removeItem("hasSeenPopup"); // Reset the 'hasSeenPopup' flag
+          } else {
+            // Otherwise, the user has already seen the popup and it's within the 3-day limit
+            const hasSeenPopup = localStorage.getItem("hasSeenPopup");
+            if (!hasSeenPopup) {
+              setShowPopup(true);
+              localStorage.setItem("hasSeenPopup", "true"); // Mark the popup as shown
+            }
+          }
+        }
+      } catch (error) {
+        console.error("Error fetching popups:", error);
+      }
+    };
+
+    fetchPopups();
+  }, []); // Runs once when the component mounts
+
+  // useEffect(() => {
+  //   // Get the timestamp of when the popup was shown
+  //   const popupTimestamp = localStorage.getItem("popupTimestamp");
+
+  //   // Get the current time
+  //   const currentTime = new Date().getTime();
+  //   const threeDaysInMillis = 3 * 24 * 60 * 60 * 1000; // 3 days in milliseconds
+
+  //   // If the popup was shown more than 3 days ago or it's the first time visit
+  //   if (!popupTimestamp || currentTime - popupTimestamp > threeDaysInMillis) {
+  //     setShowPopup(true);
+  //     localStorage.setItem("popupTimestamp", currentTime.toString()); // Set the new timestamp
+  //     localStorage.removeItem("hasSeenPopup"); // Reset the 'hasSeenPopup' flag
+  //   } else {
+  //     // Otherwise, the user has already seen the popup and it's within the 3-day limit
+  //     const hasSeenPopup = localStorage.getItem("hasSeenPopup");
+  //     if (!hasSeenPopup) {
+  //       setShowPopup(true);
+  //       localStorage.setItem("hasSeenPopup", "true"); // Mark the popup as shown
+  //     }
+  //   }
+  // }, []);
+
+
+
+    // // Show the popup when the page loads
+    // useEffect(() => {
+    //   setShowPopup(true);
+    // }, []);
+
+   
 
   console.log(location,"location address")
   return (
@@ -289,6 +371,8 @@ function App() {
 
       <MetaPixelTracker />
 
+      
+
 
 
       <PriceRangeProvider>
@@ -301,7 +385,16 @@ function App() {
 
         {/* <SantaLottie /> */}
 
-      
+        {!shouldHideNavbar && <div>
+        
+            {(showPopup   && livePopup) ? (
+              <ImagePopup  onClose={() => setShowPopup(false)} />
+            ) : null}
+          </div>
+
+         }
+
+        
 
 
         <ScrollToTopButton />
@@ -523,6 +616,12 @@ function App() {
           <Route path='/dashboard-analytics' element={
             <SellerProtectedRoute >
               <Shopalldataanalytics />
+            </SellerProtectedRoute>
+          } />
+
+          <Route path='/dashboard-popup' element={
+            <SellerProtectedRoute >
+              <Shopallpopup />
             </SellerProtectedRoute>
           } />
 

@@ -182,13 +182,13 @@ function AllCoupoun() {
                         open && (
                             <div className="fixed top-0 left-0 w-full h-screen bg-[#0000006c] z-[1000] flex justify-center items-center">
 
-                                <div className="w-[50%] h-[auto] bg-white rounded-md shadow pb-5">
+                                <div className="w-[50%] mt-[100px]  bg-white rounded-md shadow pb-5 ">
                                     <div className="w-full p-4 flex justify-end">
                                         <RxCross2 size={30} className='cursor-pointer' onClick={() => setOpen(false)} />
 
                                     </div>
 
-                                    <h5 className='text-[30px] font-Poppins text-center'>Create Coupon Code</h5>
+                                    <h5 className='text-[26px] font-Poppins text-center'>Create Coupon Code</h5>
 
 
                                     {/* create coupon code  */}
