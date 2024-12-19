@@ -16,17 +16,14 @@ function Home() {
         // Fetch popups from the API
         const response = await axios.get(`${server}/get-allpopup`);
         const popups = response.data.popup;
-        
+
         // Find the popup that is live
         const livePopup = popups.find(popup => popup.isLive === true);
-        
+
         if (livePopup) {
           setLivePopup(livePopup); // Store the live popup
-          
-          // Get the timestamp of when the popup was shown
-          const popupTimestamp = localStorage.getItem("popupTimestamp");
 
-          // Get the current time
+          const popupTimestamp = localStorage.getItem("popupTimestamp");
           const currentTime = new Date().getTime();
           const threeDaysInMillis = 3 * 24 * 60 * 60 * 1000; // 3 days in milliseconds
 
@@ -49,12 +46,20 @@ function Home() {
       }
     };
 
-    // Delay the API call by 5 seconds
-    const timeout = setTimeout(() => {
-      fetchPopups();
-    }, 8000); // 5-second delay
+    const handleLoad = () => {
+      // Delay the API call by 5 seconds after the page is fully loaded
+      setTimeout(() => {
+        fetchPopups();
+      }, 9000); // 5-second delay
+    };
 
-    return () => clearTimeout(timeout); // Cleanup timeout if component unmounts
+    // Add the event listener for the page load
+    window.addEventListener("load", handleLoad);
+
+    return () => {
+      // Cleanup the event listener on unmount
+      window.removeEventListener("load", handleLoad);
+    };
   }, []); // Runs once when the component mounts
 
 
