@@ -49,7 +49,12 @@ function Home() {
       }
     };
 
-    fetchPopups();
+    // Delay the API call by 5 seconds
+    const timeout = setTimeout(() => {
+      fetchPopups();
+    }, 8000); // 5-second delay
+
+    return () => clearTimeout(timeout); // Cleanup timeout if component unmounts
   }, []); // Runs once when the component mounts
 
 
