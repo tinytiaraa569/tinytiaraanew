@@ -149,6 +149,51 @@ function App() {
 
   const dispatch = useDispatch();
 
+  const [showPopup, setShowPopup] = useState(false);
+  const [livePopup, setLivePopup] = useState(null); // Store live popup data
+
+  useEffect(() => {
+    const fetchPopups = async () => {
+      try {
+        // Fetch popups from the API
+        const response = await axios.get(`${server}/get-allpopup`);
+        const popups = response.data.popup;
+        
+        // Find the popup that is live
+        const livePopup = popups.find(popup => popup.isLive === true);
+        
+        if (livePopup) {
+          setLivePopup(livePopup); // Store the live popup
+          
+          // Get the timestamp of when the popup was shown
+          const popupTimestamp = localStorage.getItem("popupTimestamp");
+
+          // Get the current time
+          const currentTime = new Date().getTime();
+          const threeDaysInMillis = 3 * 24 * 60 * 60 * 1000; // 3 days in milliseconds
+
+          // If the popup was shown more than 3 days ago or it's the first time visit
+          if (!popupTimestamp || currentTime - popupTimestamp > threeDaysInMillis) {
+            setShowPopup(true);
+            localStorage.setItem("popupTimestamp", currentTime.toString()); // Set the new timestamp
+            localStorage.removeItem("hasSeenPopup"); // Reset the 'hasSeenPopup' flag
+          } else {
+            // Otherwise, the user has already seen the popup and it's within the 3-day limit
+            const hasSeenPopup = localStorage.getItem("hasSeenPopup");
+            if (!hasSeenPopup) {
+              setShowPopup(true);
+              localStorage.setItem("hasSeenPopup", "true"); // Mark the popup as shown
+            }
+          }
+        }
+      } catch (error) {
+        console.error("Error fetching popups:", error);
+      }
+    };
+
+    fetchPopups();
+  }, []); // Runs once when the component mounts
+
 
 
 
@@ -281,73 +326,30 @@ function App() {
   }, []); // Only run on initial mount
 
 
-  const [showPopup, setShowPopup] = useState(false);
-  const [livePopup, setLivePopup] = useState(null); // Store live popup data
+ 
 
   // useEffect(() => {
-  //   const fetchPopups = async () => {
-  //     try {
-  //       // Fetch popups from the API
-  //       const response = await axios.get(`${server}/get-allpopup`);
-  //       const popups = response.data.popup;
-        
-  //       // Find the popup that is live
-  //       const livePopup = popups.find(popup => popup.isLive === true);
-        
-  //       if (livePopup) {
-  //         setLivePopup(livePopup); // Store the live popup
-          
-  //         // Get the timestamp of when the popup was shown
-  //         const popupTimestamp = localStorage.getItem("popupTimestamp");
+  //   // Get the timestamp of when the popup was shown
+  //   const popupTimestamp = localStorage.getItem("popupTimestamp");
 
-  //         // Get the current time
-  //         const currentTime = new Date().getTime();
-  //         const threeDaysInMillis = 3 * 24 * 60 * 60 * 1000; // 3 days in milliseconds
+  //   // Get the current time
+  //   const currentTime = new Date().getTime();
+  //   const threeDaysInMillis = 3 * 24 * 60 * 60 * 1000; // 3 days in milliseconds
 
-  //         // If the popup was shown more than 3 days ago or it's the first time visit
-  //         if (!popupTimestamp || currentTime - popupTimestamp > threeDaysInMillis) {
-  //           setShowPopup(true);
-  //           localStorage.setItem("popupTimestamp", currentTime.toString()); // Set the new timestamp
-  //           localStorage.removeItem("hasSeenPopup"); // Reset the 'hasSeenPopup' flag
-  //         } else {
-  //           // Otherwise, the user has already seen the popup and it's within the 3-day limit
-  //           const hasSeenPopup = localStorage.getItem("hasSeenPopup");
-  //           if (!hasSeenPopup) {
-  //             setShowPopup(true);
-  //             localStorage.setItem("hasSeenPopup", "true"); // Mark the popup as shown
-  //           }
-  //         }
-  //       }
-  //     } catch (error) {
-  //       console.error("Error fetching popups:", error);
+  //   // If the popup was shown more than 3 days ago or it's the first time visit
+  //   if (!popupTimestamp || currentTime - popupTimestamp > threeDaysInMillis) {
+  //     setShowPopup(true);
+  //     localStorage.setItem("popupTimestamp", currentTime.toString()); // Set the new timestamp
+  //     localStorage.removeItem("hasSeenPopup"); // Reset the 'hasSeenPopup' flag
+  //   } else {
+  //     // Otherwise, the user has already seen the popup and it's within the 3-day limit
+  //     const hasSeenPopup = localStorage.getItem("hasSeenPopup");
+  //     if (!hasSeenPopup) {
+  //       setShowPopup(true);
+  //       localStorage.setItem("hasSeenPopup", "true"); // Mark the popup as shown
   //     }
-  //   };
-
-  //   fetchPopups();
-  // }, []); // Runs once when the component mounts
-
-  useEffect(() => {
-    // Get the timestamp of when the popup was shown
-    const popupTimestamp = localStorage.getItem("popupTimestamp");
-
-    // Get the current time
-    const currentTime = new Date().getTime();
-    const threeDaysInMillis = 3 * 24 * 60 * 60 * 1000; // 3 days in milliseconds
-
-    // If the popup was shown more than 3 days ago or it's the first time visit
-    if (!popupTimestamp || currentTime - popupTimestamp > threeDaysInMillis) {
-      setShowPopup(true);
-      localStorage.setItem("popupTimestamp", currentTime.toString()); // Set the new timestamp
-      localStorage.removeItem("hasSeenPopup"); // Reset the 'hasSeenPopup' flag
-    } else {
-      // Otherwise, the user has already seen the popup and it's within the 3-day limit
-      const hasSeenPopup = localStorage.getItem("hasSeenPopup");
-      if (!hasSeenPopup) {
-        setShowPopup(true);
-        localStorage.setItem("hasSeenPopup", "true"); // Mark the popup as shown
-      }
-    }
-  }, []);
+  //   }
+  // }, []);
 
 
 
