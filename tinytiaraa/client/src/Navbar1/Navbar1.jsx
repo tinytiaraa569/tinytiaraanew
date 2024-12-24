@@ -849,7 +849,7 @@ function Navbar1() {
 
                         <div>
                             <div className="logo  !overflow-hidden" onClick={() => navigate("/")}>
-                                <img className='shadowlogonav' loading='lazy' src="https://backend.tinytiaraa.com:8000/uploads/images/logowebsite/logo.gif" alt="" />
+                                <img className='shadowlogonav' loading='lazy' src="https://backend.tinytiaraa.com:8000/uploads/images/logowebsite/pgqpod1dbwdxo4kudbjl.webp" alt="" />
                             </div>
                         </div>
 
@@ -1051,19 +1051,19 @@ function Navbar1() {
                         <BiMenuAltLeft size={40} className='ml-4' onClick={() => setOpen(true)} />
                     </div>
 
-                    {/* <div className="logo pt-2" onClick={() => {
+                    <div className="logo pt-2" onClick={() => {
                         setbars(false)
                         navigate("/")
                     }} >
                         <img loading='lazy' className='w-[150px] h-[60px] object-contain' src="https://backend.tinytiaraa.com:8000/uploads/images/logowebsite/pgqpod1dbwdxo4kudbjl.webp" alt="" />
-                    </div> */}
+                    </div>
 
-                    <div className="logo !overflow-hidden" onClick={() => {
+                    {/* <div className="logo !overflow-hidden" onClick={() => {
                         setbars(false)
                         navigate("/")
                     }} >
                         <img loading='lazy ' className='w-[150px] h-[57px] object-contain' src="https://backend.tinytiaraa.com:8000/uploads/images/logowebsite/logo.gif" alt="" />
-                    </div>
+                    </div> */}
 
                     <div>
                         <div onClick={() => {
@@ -1176,10 +1176,13 @@ function Navbar1() {
 
                                                         </h3>
                                                         <h6 className="pb-2 collectionnav1 text-[14px]" onClick={() => {
-                                                            navigate("/products")
+                                                           handleMetalSelect('gold')
                                                             closenavbar()
                                                         }}>Gold</h6>
-                                                        <h6 className="pb-2 collectionnav1 text-[14px]">Silver</h6>
+                                                        <h6 className="pb-2 collectionnav1 text-[14px]" onClick={()=>{
+                                                            handleMetalSelect('silver')
+                                                            closenavbar()
+                                                        }}>Silver</h6>
                                                     </div>
                                                     <div className="mb-4">
                                                         <h3 className="font-semibold text-[16px] text-center">By Category</h3>
@@ -1196,7 +1199,7 @@ function Navbar1() {
                                                                     }} // Handle click on category
                                                                 >
                                                                     <img
-                                                                        src={i.image_Url}
+                                                                        src={`${imgdburl}${i?.image_Url?.url}`}
                                                 
                                                                         alt=""
                                                                         style={{ width: "35px", height: "40px", objectFit: "contain", userSelect: "none" }}

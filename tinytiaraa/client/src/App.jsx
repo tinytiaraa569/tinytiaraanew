@@ -343,7 +343,7 @@ function App() {
 
         {!shouldHideNavbar && <Navbar1 />}
 
-        <GlobalSnowfall/>
+        {/* <GlobalSnowfall/> */}
 
 
         {/* <SantaLottie /> */}
