@@ -18,6 +18,7 @@ function NewBanner() {
     const [isDragging, setIsDragging] = useState(false);
     const [errors, setErrors] = useState({});
     const fileInputRef = useRef(null);
+    const [isUploading, setIsUploading] = useState(false); 
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -103,6 +104,7 @@ function NewBanner() {
         if (Object.keys(newErrors).length === 0) {
             // Prepare banner data with URLs instead of Base64
             console.log(images,"see the images")
+            setIsUploading(true);
             const bannerData = { title, link, images};
            
 
@@ -140,6 +142,8 @@ function NewBanner() {
                   });
                 setErrors(prev => ({ ...prev, server: "Error saving banner. Please try again." }));
 
+            }finally {
+                setIsUploading(false); // Hide uploading overlay
             }
         }
     };
@@ -253,6 +257,12 @@ function NewBanner() {
                     </div>
                 </div>
             </div>
+             {/* Uploading Overlay */}
+             {isUploading && (
+                <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+                    <div className="text-white text-xl">Uploading...</div>
+                </div>
+            )}
         </div>
     );
 }

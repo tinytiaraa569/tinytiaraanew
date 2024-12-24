@@ -26,6 +26,7 @@ function ShopProductDetailsPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [productName]);
+  console.log(data,"see the data ")
 
   return (
     <div>

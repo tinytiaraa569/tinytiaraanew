@@ -109,6 +109,8 @@ import ImagePopup from './ImagePopup/ImagePopup';
 import Shopallpopup from './ShopAllPopup/Shopallpopup';
 import axios from 'axios';
 import { server } from './server';
+import ShopAllStocks from './ShopallStocks/ShopAllStocks';
+
 
 
 
@@ -218,7 +220,11 @@ function App() {
     location.pathname.startsWith('/dashboard/categories/view/:categoryId') ||
     location.pathname.startsWith('/dashboard-analytics') ||
     location.pathname.startsWith('/dashboard-popup') ||
+    location.pathname.startsWith('/dashboard-stocks') ||
 
+
+
+    
     
 
 
@@ -506,6 +512,12 @@ function App() {
               <ShopAllProducts />
             </SellerProtectedRoute>
           } />
+
+        <Route path='/dashboard-stocks' element={
+                    <SellerProtectedRoute >
+                      <ShopAllStocks />
+                    </SellerProtectedRoute>
+                  } />
 
           <Route path='/dashboard-refunds' element={
             <SellerProtectedRoute >

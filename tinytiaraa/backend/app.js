@@ -81,7 +81,7 @@ const aboutbanner = require("./controller/aboutbanner")
 const custombanner = require("./controller/custombanner")
 const contactbanner = require("./controller/contactbanner")
 const category = require("./controller/category")
-// const currency = require("./controller/Currency")
+const currency = require("./controller/Currency")
 const popup = require("./controller/popup")
 
 
@@ -127,7 +127,7 @@ app.use("/api/v2", contactbanner);
 
 app.use("/api/v2", calculateEDDRoutes);
 app.use("/api/v2", category);
-// app.use("/api/v2", currency);
+app.use("/api/v2", currency);
 app.use("/api/v2", popup);
 
 

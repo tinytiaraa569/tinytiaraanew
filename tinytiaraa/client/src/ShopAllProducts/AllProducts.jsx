@@ -88,7 +88,7 @@ function AllProducts() {
             name: item.name,
             price: `₹ ${item.discountPrice}`,
             Stock: item.stock !== null ? item.stock : 'M/E',
-            sold: 10, // Replace with actual sold count if available
+            sold: item?.sold_out, // Replace with actual sold count if available
             isLowStock: checkLowStock(item),
         };
     });

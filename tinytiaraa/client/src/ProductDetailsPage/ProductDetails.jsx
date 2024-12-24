@@ -2624,6 +2624,32 @@ const ProductDetailsInfo = ({ data ,shouldShowChainOptions }) => {
     console.log(data, "see the data")
     const [expanded, setExpanded] = useState(true);
 
+    const [categoriesData, setCategoriesData] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    // Fetch categories from the API
+    useEffect(() => {
+        const fetchCategories = async () => {
+            try {
+                const response = await axios.get(`${server}/get-allcategories`);
+                // Filter categories based on type (gold or silver)
+                const filteredGoldCategories = response.data.categories.filter(category => category.type === 'gold');
+                setCategoriesData(filteredGoldCategories); // Store gold categories
+            } catch (error) {
+                console.error('Error fetching categories:', error);
+                alert('Failed to fetch categories');
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchCategories();
+    }, []);
+
+
+    console.log(categoriesData,"categoriesData-------------------")
+    const productCategory = data?.category;
+
 
     return (
         <div className='bg-[#fcfcfc] shadow-lg  border-[0.1px] border-[#f8f8f8] mb-5 px-10 800px:px-2 py-2 rounded pb-5 productdetailspageresp'>
@@ -2659,7 +2685,21 @@ const ProductDetailsInfo = ({ data ,shouldShowChainOptions }) => {
                             <div className="bg-[#5DC2B0] w-[300px] font-Poppins mb-3 rounded-[4px] productdetailresptable">
                                 <div className="t1sec px-[12.5px] py-[16px] gap-2 flex items-center">
                                     <span><AiOutlineGold /></span>
-                                    <span className='font-[500]'>Gold</span>
+                                    {
+                                    categoriesData
+                                        .filter(category => category.title.toLowerCase().includes(productCategory.toLowerCase())) // Match by title or another attribute
+                                        .length > 0 ? (
+                                        categoriesData
+                                            .filter(category => category.title.toLowerCase().includes(productCategory.toLowerCase()))
+                                            .map((category) => (
+                                            <span className="font-[500]" key={category._id}>
+                                                Gold
+                                            </span>
+                                            ))
+                                        ) : (
+                                        <span className="font-[500]">Silver</span>
+                                        )
+                                    }
                                 </div>
                                 <div className="tsec2 flex font-Poppins">
                                     <div className='w-[200px] bg-[#b6f0e5] mr-[1.5px] px-[10px] py-[10px]'>
@@ -2672,7 +2712,7 @@ const ProductDetailsInfo = ({ data ,shouldShowChainOptions }) => {
                                     </div>
                                 </div>
                             </div>
-
+{/* 
                             <div className="bg-[#5DC2B0] w-[300px] font-Poppins mb-3 rounded-[4px] productdetailresptable">
                                 <div className="t1sec px-[12.5px] py-[16px] gap-2 flex items-center">
                                     <span><IoDiamondOutline /></span>
@@ -2688,7 +2728,41 @@ const ProductDetailsInfo = ({ data ,shouldShowChainOptions }) => {
                                         <p className='text-[#4f3267] text-[13px]'>{data?.diamondWeight ? data.diamondWeight.quality : " GH-VS"}</p>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
+
+                            {/* Render the main container only if there is valid weight or quality */}
+{(data?.diamondWeight?.weight !== "NA" && data?.diamondWeight?.weight !== null) || 
+(data?.diamondWeight?.quality !== "NA" && data?.diamondWeight?.quality !== null) ? (
+  <div className="bg-[#5DC2B0] w-[300px] font-Poppins mb-3 rounded-[4px] productdetailresptable">
+    <div className="t1sec px-[12.5px] py-[16px] gap-2 flex items-center">
+      <span><IoDiamondOutline /></span>
+      <span className='font-[500]'>Diamond</span>
+    </div>
+    
+    <div className="tsec2 flex font-Poppins">
+      {/* Conditional rendering for Weight */}
+      {data?.diamondWeight?.weight !== "NA" && data?.diamondWeight?.weight !== null ? (
+        <div className='w-[200px] bg-[#b6f0e5] mr-[1.5px] px-[10px] py-[10px]'>
+          <div className='pb-[8px] font-[600] '>Weight</div>
+          <p className='text-[#4f3267] text-[13px]'>
+            {data?.diamondWeight?.weight || "Not Updated"}
+          </p>
+        </div>
+      ) : null}
+
+      {/* Conditional rendering for Quality */}
+      {data?.diamondWeight?.quality !== "NA" && data?.diamondWeight?.quality !== null ? (
+        <div className='w-[200px] bg-[#b6f0e5] mr-[1.5px] px-[10px] py-[10px]'>
+          <div className='pb-[8px] font-[600] '>Quality</div>
+          <p className='text-[#4f3267] text-[13px]'>
+            {data?.diamondWeight?.quality || "GH-VS"}
+          </p>
+        </div>
+      ) : null}
+    </div>
+  </div>
+) : null}
+
 
                             <div className="bg-[#5DC2B0] w-[300px] font-Poppins mb-3 rounded-[4px] productdetailresptable">
                                 <div className="t1sec px-[12.5px] py-[16px] gap-2 flex items-center">

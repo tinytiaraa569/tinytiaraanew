@@ -239,25 +239,25 @@ function CreateBanner() {
 
                   {/* Reorder Buttons with icons */}
                   <div className="flex justify-between mt-2">
-          <button
-          className="flex items-center text-gray-600 hover:text-gray-800"
-          onClick={() => changeBannerOrder(index, -1)}
-          disabled={index === 0}
-          >
-          <FaArrowUp className="mr-1" /> Move Up
-          </button>
-          <button
-          className="flex items-center text-gray-600 hover:text-gray-800"
-          onClick={() => changeBannerOrder(index, 1)}
-          disabled={index === banners.length - 1}
-          >
-          <FaArrowDown className="mr-1" /> Move Down
-          </button>
-          </div>
-                </div>
-              ))}
-            </div>
-          </div>
+                    <button
+                    className="flex items-center text-gray-600 hover:text-gray-800"
+                    onClick={() => changeBannerOrder(index, -1)}
+                    disabled={index === 0}
+                    >
+                    <FaArrowUp className="mr-1" /> Move Up
+                    </button>
+                    <button
+                    className="flex items-center text-gray-600 hover:text-gray-800"
+                    onClick={() => changeBannerOrder(index, 1)}
+                    disabled={index === banners.length - 1}
+                    >
+                    <FaArrowDown className="mr-1" /> Move Down
+                    </button>
+                    </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
 
           {/* Confirmation Popup */}
           {showDeletePopup && (

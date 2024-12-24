@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import { imgdburl, server } from '@/server';
-import { useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { RxCross2 } from 'react-icons/rx';
 import { FaEdit, FaTrash } from 'react-icons/fa';
 import swal from 'sweetalert';
@@ -35,7 +35,6 @@ function Allpopup() {
     bannerimg: useRef(null),
   };
 
-  // Fetch all popups
   const fetchPopups = async () => {
     try {
       const { data } = await axios.get(`${server}/get-allpopup`);
@@ -93,8 +92,6 @@ function Allpopup() {
       setPopupData({ title: '', bannerimg: '' });
       setIsEditing(false);
       setEditId(null);
-
-      // Refetch popups to update the list
       fetchPopups();
     } catch (error) {
       console.error('Error submitting popup:', error);
@@ -104,15 +101,12 @@ function Allpopup() {
 
   const handleToggleLive = async (id, isLive) => {
     try {
-      // If the popup is currently live and selected again, turn it off (set all to false)
       if (isLive) {
-        await axios.put(`${server}/toogle-popup`);  // Call API to set all popups to inactive
+        await axios.put(`${server}/toogle-popup`);
       } else {
-        // If the popup is not live, set it to live and deactivate others
         await axios.put(`${server}/toogle-popup/${id}`);
       }
-  
-      // Update local state: Set only the selected popup to live and others to false
+
       setPopups((prev) =>
         prev.map((popup) =>
           popup._id === id
@@ -124,7 +118,6 @@ function Allpopup() {
       console.error('Error toggling popup live status:', error);
     }
   };
-  
 
   const handleEdit = (popup) => {
     setPopupData({
@@ -157,13 +150,39 @@ function Allpopup() {
     return bannerimg;
   };
 
-  return (
-    <Box p={4}>
-      <Typography variant="h4" gutterBottom>
-        Manage Popups
-      </Typography>
+   const location = useLocation();
+  
+      // Get the last segment of the URL (e.g., "dashboard" or "overview")
+      const pathSegments = location.pathname.split('/').filter(Boolean);
+      const currentPage = pathSegments[pathSegments.length - 1];
+    
+      // You can map the path segment to a more readable name
+      const breadcrumbText = currentPage.charAt(0).toUpperCase() + currentPage.slice(1); // Capitalize first letter
+  
+      useEffect(() => {
+          window.scrollTo(0, 0)
+        }, [])
+  
 
-      {/* Popup Form */}
+  return (
+    <div className='bg-[#f9f9f9] w-full flex justify-center !font-poppins'>
+       <Box p={4} sx={{width:"90%" , backgroundColor: '#f9f9f9', minHeight: '100vh' }}>
+       <h2 className='text-[24px] font-[500]'>Manage Popups</h2>
+       <nav aria-label="Breadcrumb" className="text-sm text-gray-600 mb-4 mt-1">
+                                  <ol className="flex space-x-2">
+                                  <li>
+                                      <Link to={"/dashboard"} className="hover:text-blue-500">Home</Link>
+                                  </li>
+                                  <li>&gt;</li> {/* Separator */}
+                                  <li>
+                                      <span className="text-gray-400">{breadcrumbText}</span> {/* Active breadcrumb */}
+                                  </li>
+                                  </ol>
+                              </nav>
+
+     
+
+
       <Box
         component="form"
         onSubmit={handleSubmit}
@@ -171,10 +190,13 @@ function Allpopup() {
           mb: 4,
           p: 3,
           borderRadius: 2,
-          boxShadow: 2,
+          boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)',
           backgroundColor: 'white',
         }}
       >
+         <div className='mb-5'>
+        <h3 className='text-[18px] text-[#0d0d0dd3] border-b-2 border-b-[#00000084] inline-block'>Create New Popup</h3>
+      </div>
         <TextField
           fullWidth
           label="Popup Title"
@@ -190,9 +212,16 @@ function Allpopup() {
           ref={fileInputRefs.bannerimg}
           onChange={handleImageChange}
           accept="image/*"
+          style={{ marginBottom: '16px' }}
         />
         {popupData.bannerimg && (
-          <Box position="relative" mt={2} width={150} height={100}>
+          <Box
+            position="relative"
+            mt={2}
+            width={150}
+            height={100}
+            sx={{ border: '1px solid #ddd', borderRadius: 2 }}
+          >
             <img
               src={getBannerImageSrc(popupData.bannerimg)}
               alt="Banner Preview"
@@ -219,36 +248,46 @@ function Allpopup() {
             </IconButton>
           </Box>
         )}
+        <div>
+
         <Button
           type="submit"
           variant="contained"
           color="primary"
-          sx={{ mt: 3 }}
-        >
+          sx={{ mt: 3, fontWeight: 'bold', backgroundColor: '#007bff' }}
+          >
           {isEditing ? 'Update Popup' : 'Create Popup'}
         </Button>
+          </div>
       </Box>
 
-      {/* Popups List */}
-      <TableContainer component={Paper}>
+      <TableContainer
+        component={Paper}
+        sx={{ boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)', borderRadius: 2 }}
+      >
         <Table>
           <TableHead>
-            <TableRow>
-              <TableCell>Title</TableCell>
-              <TableCell>Banner</TableCell>
-              <TableCell>Live</TableCell>
-              <TableCell>Actions</TableCell>
+            <TableRow sx={{ backgroundColor: '#f5f5f5' }}>
+              <TableCell sx={{ fontWeight: 'bold', color: '#333' }}>Title</TableCell>
+              <TableCell sx={{ fontWeight: 'bold', color: '#333' }}>Banner</TableCell>
+              <TableCell sx={{ fontWeight: 'bold', color: '#333' }}>Live</TableCell>
+              <TableCell sx={{ fontWeight: 'bold', color: '#333' }}>Actions</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
             {popups.map((popup) => (
-              <TableRow key={popup._id}>
+              <TableRow key={popup._id} hover>
                 <TableCell>{popup.title}</TableCell>
                 <TableCell>
                   <img
                     src={getBannerImageSrc(popup.bannerimg)}
                     alt="Popup Banner"
-                    style={{ width: 60, height: 40, borderRadius: 4 }}
+                    style={{
+                      width: 60,
+                      height: 40,
+                      borderRadius: 4,
+                      border: '1px solid #ddd',
+                    }}
                   />
                 </TableCell>
                 <TableCell>
@@ -262,6 +301,7 @@ function Allpopup() {
                   <IconButton
                     color="primary"
                     onClick={() => handleEdit(popup)}
+                    sx={{ mr: 1 }}
                   >
                     <FaEdit />
                   </IconButton>
@@ -278,6 +318,9 @@ function Allpopup() {
         </Table>
       </TableContainer>
     </Box>
+
+    </div>
+   
   );
 }
 

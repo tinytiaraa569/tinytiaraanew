@@ -269,6 +269,7 @@ import { LiaClipboardListSolid } from "react-icons/lia";
 import { MdCreateNewFolder } from "react-icons/md";
 import PollIcon from '@mui/icons-material/Poll';
 import './shopdashadjust.css'
+import { AiOutlineStock } from "react-icons/ai";
 
 
 const DashboardSideBar = ({active}) => {
@@ -302,9 +303,29 @@ const DashboardSideBar = ({active}) => {
         { text: "Category", icon: <BiCategory />, path: "/create-category",active:2 },
       ],
     },
-    { text: "Orders", icon: <ShoppingCartCheckoutIcon />, path: "/dashboard-orders",active:10 },
-    { text: "Products", icon: <LiaClipboardListSolid size={22}/>, path: "/dashboard-products",active:3 },
-    { text: "Create Product", icon: <MdCreateNewFolder size={22}/>, path: "/dashboard-create-product" ,active:4},
+    // { text: "Orders", icon: <ShoppingCartCheckoutIcon />, path: "/dashboard-orders",active:10 },
+    { text: "Orders",
+       icon: <ShoppingCartCheckoutIcon />,
+       active:10 ,
+       submenu: [
+      { text: "All Orders", icon: <ShoppingCartCheckoutIcon />, path: "/dashboard-orders",active:10 },
+      { text: "Refunds", icon: <UndoIcon />, path: "/dashboard-refunds",active:10 },
+    ],},
+
+
+    { text: "Products",
+       icon: <LiaClipboardListSolid size={22}/>
+       ,active:3 , 
+       submenu: [
+        { text: "All Products", icon: <LiaClipboardListSolid />, path: "/dashboard-products",active:3 },
+        { text: "Create Product", icon: <MdCreateNewFolder size={22}/>, path: "/dashboard-create-product" ,active:3},
+
+      ]
+      },
+
+
+    // { text: "Products", icon: <LiaClipboardListSolid size={22}/>, path: "/dashboard-products",active:3 },
+    // { text: "Create Product", icon: <MdCreateNewFolder size={22}/>, path: "/dashboard-create-product" ,active:4},
     {
       text: "Events",
       icon: <Event />,
@@ -315,7 +336,7 @@ const DashboardSideBar = ({active}) => {
       ],
     },
     { text: "Coupon", icon: <RateReviewIcon />, path: "/dashboard-coupons",active:7 },
-    { text: "Refunds", icon: <UndoIcon />, path: "/dashboard-refunds",active:8 },
+    // { text: "Refunds", icon: <UndoIcon />, path: "/dashboard-refunds",active:8 },
     { text: "Inbox", icon: <Inbox />, path: "/dashboard-messages",active:9 },
     { text: "Affiliate", icon: <ReferralIcon />, path: "/dashboard-referral" ,active:11},
     { 
@@ -331,6 +352,10 @@ const DashboardSideBar = ({active}) => {
     },
     { text: "RateCard", icon: <RateReviewIcon />, path: "/dashboard-ratecard",active:14 },
     { text: "Users", icon: <Person />, path: "/dashboard-allusers" ,active:15},
+    { text: "Stocks", icon: <AiOutlineStock />, path: "/dashboard-stocks" ,active:20},
+
+
+    
     
     { text: "Currency", icon: <CurrencyExchangeIcon />, path: "/dashboard-currency",active:17 },
     { text: "Analytics", icon: <PollIcon />, path: "/dashboard-analytics",active:18 },

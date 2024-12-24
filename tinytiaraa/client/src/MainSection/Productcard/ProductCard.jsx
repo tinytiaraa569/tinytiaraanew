@@ -25,6 +25,7 @@ function ProductCard({ data ,selectedEnamelColorimg}) {
   const product_name = d.replace(/\s+/g, "-")
   const navigate = useNavigate()
   const { currency, conversionRates } = useSelector((state) => state.currency); // Accessing currency state and conversion rates
+  // console.log(conversionRates,"conversion rates ----")
 
 
   useEffect(() => {
