@@ -472,7 +472,12 @@ function OrderDetails() {
                     <h4 className='pt-3 text-[15px] text-[#000b]'>{data?.shippingAddress.name}</h4>
                     <h4 className='pt-3 text-[15px] text-[#000b]'>{data?.shippingAddress.address1}</h4>
                     <h4 className='pt-1 text-[15px] text-[#000b]'>{data?.shippingAddress.address2}</h4>
+
+                    <div className='flex gap-2'>
                     <h4 className='pt-1 text-[15px] text-[#000b]'>{data?.shippingAddress.city}</h4>
+                    <h4 className='pt-1 text-[15px] text-[#000b]'>{data?.shippingAddress.zipCode}</h4>
+                    </div>
+
                     <h4 className='pt-1 text-[15px] text-[#000b]'>{data?.shippingAddress.country}</h4>
                     <h4 className='pt-1 text-[15px] font-[500] text-[#000b]'>{data?.shippingAddress?.email}</h4>
 
@@ -483,7 +488,12 @@ function OrderDetails() {
                     <h4 className='pt-3 text-[15px] text-[#000b]'>{data?.billingAddress?.name}</h4>
                     <h4 className='pt-3 text-[15px] text-[#000b]'>{data?.billingAddress?.address1}</h4>
                     <h4 className='pt-1 text-[15px] text-[#000b]'>{data?.billingAddress?.address2}</h4>
+                    <div className='flex gap-2'>
                     <h4 className='pt-1 text-[15px] text-[#000b]'>{data?.billingAddress?.city}</h4>
+                    <h4 className='pt-1 text-[15px] text-[#000b]'>- {data?.billingAddress?.zipCode}</h4>
+
+                    </div>
+
                     <h4 className='pt-1 text-[15px] text-[#000b]'>{data?.billingAddress?.country}</h4>
                     <h4 className='pt-1 text-[15px] font-[500] text-[#000b]'>{data?.billingAddress?.email}</h4>
 

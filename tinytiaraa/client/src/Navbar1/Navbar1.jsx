@@ -1010,7 +1010,7 @@ function Navbar1() {
                             </div>
                             <div className='text-center couponsectionadjustslider'>
 
-                                <span>Get 10% Off On Your Order above ₹5000 Or More! :- Tiny10</span>
+                            <span>Use coupon code <b>NewYear500</b>  at checkout for an additional ₹500 Off!</span>
                             </div>
 
                         </Slider>
@@ -1019,7 +1019,14 @@ function Navbar1() {
                     <div className='currencysection !mr-10 w-[10%]' onClick={toggleCurrencySelector} style={{ cursor: 'pointer', display: 'flex', alignItems: 'center' }}>
                         <div className='headcurrencymain ml-6'>
 
-                            <img src={currencyData[selectedCurrency].flag} alt={`${selectedCurrency} flag`} className="w-5 h-5 mr-2" />
+                            {/* <img src={currencyData[selectedCurrency].flag} alt={`${selectedCurrency} flag`} className="w-5 h-5 mr-2" /> */}
+                                    {currencyDataz.length > 0 && (
+                            <img 
+                                src={currencyDataz.find(currency => currency.code === selectedCurrency)?.flag} 
+                                alt={`${selectedCurrency} flag`} 
+                                className="w-5 h-5 mr-2" 
+                            />
+                        )}
                             <span className='headcurrencycode font-[400]'>{selectedCurrency}</span>
                         </div>
                         </div>

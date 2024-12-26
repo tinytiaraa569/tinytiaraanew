@@ -100,7 +100,7 @@ function Customise() {
               Customize Your Jewelry
             </button>
 
-            <p className="text-[#000000d6] text-[13px] mt-2">Coming Soon..</p>
+            {/* <p className="text-[#000000d6] text-[13px] mt-2">Coming Soon..</p> */}
           </div>
         </div>
       </div>

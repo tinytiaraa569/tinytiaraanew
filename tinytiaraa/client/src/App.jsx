@@ -482,6 +482,7 @@ function App() {
             </SellerProtectedRoute>
           } />
 
+          
 
           <Route path='/dashboard-create-product' element={
             <SellerProtectedRoute >
